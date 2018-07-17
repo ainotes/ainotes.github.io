@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>&lt;no title&gt; &mdash; Study Notes in Machine Learning 0.0.1 documentation</title>
+  <title>Probabilistic Models &mdash; Study Notes in Machine Learning 0.0.1 documentation</title>
   
 
   
@@ -33,7 +33,7 @@
     <link rel="search" title="Search" href="../../search.html" /> 
 
   
-  <script src="../../_static/js/modernizr.min.js"></script>
+  <script src="_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -82,6 +82,7 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../00_basics/00_index.html">1. Preliminaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02_neural_networks/00_index.html">2. Basic Neural Networks</a></li>
 </ul>
 
             
@@ -125,15 +126,13 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../index.html">Docs</a> &raquo;</li>
-        
-      <li>&lt;no title&gt;</li>
+      <li><a href="../../index.html">Docs</a> &raquo;</div></li><li>Probabilistic Models</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/3_ml_methods/02_prob_methods/00_temp.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/3_ml_methods/03_prob_methods/00_index.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -142,7 +141,7 @@
 
   
   <hr/>
-</div>
+
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
@@ -153,20 +152,23 @@
 
       MathJax.Hub.Register.StartupHook("TeX color Ready", function() {
    var color = MathJax.Extension["TeX/color"];
-   color.colors["theorem"] = color.getColor('RGB','225,229,153');
+   color.colors["theorem"] = color.getColor('RGB','255,229,153');
        color.colors["result"] = color.getColor('RGB','189,214,238');
        color.colors["fact"] = color.getColor('RGB','255,255,204');
        color.colors["emperical"] = color.getColor('RGB','253,240,207');
        color.colors["comment"] = color.getColor('RGB','204,255,204');
-   color.colors["thm"] = color.getColor('RGB','225,229,153');
+   color.colors["thm"] = color.getColor('RGB','255,229,153');
        color.colors["rlt"] = color.getColor('RGB','189,214,238');
        color.colors["emp"] = color.getColor('RGB','253,240,207');
        color.colors["comm"] = color.getColor('RGB','204,255,204');
        color.colors["conn1"] = color.getColor('RGB','255,0,255');
        color.colors["conn2"] = color.getColor('RGB','237,125,49');
-       color.colors["conn2"] = color.getColor('RGB','112,48,160');
+       color.colors["conn3"] = color.getColor('RGB','112,48,160');
       });
-</script>A  |def| :index:`Bayes Network` |end-span| a directed acyclic graph (DAG) associated with a probabilistic chain rule interpretation. For example,
+</script><div class="section" id="probabilistic-models">
+<h1>Probabilistic Models<a class="headerlink" href="#probabilistic-models" title="Permalink to this headline">¶</a></h1>
+</div>
+
 
            </div>
            
@@ -208,16 +210,16 @@
             SOURCELINK_SUFFIX: '.txt'
         };
     </script>
-      <script type="text/javascript" src="../../_static/jquery.js"></script>
-      <script type="text/javascript" src="../../_static/underscore.js"></script>
-      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
   
   
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+    <script type="text/javascript" src="_static/js/theme.js"></script>
   
 
   <script type="text/javascript">

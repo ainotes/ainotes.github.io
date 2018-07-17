@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Search &mdash; Study Notes in Machine Learning 0.0.1 documentation</title>
+  <title>Gaussian Process &mdash; Study Notes in Machine Learning 0.0.1 documentation</title>
   
 
   
@@ -25,12 +25,12 @@
   
 
   
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/coloring.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/eqposfix.css" type="text/css" />
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" /> 
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/coloring.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/eqposfix.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -49,7 +49,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> Study Notes in Machine Learning
+            <a href="../../index.html" class="icon icon-home"> Study Notes in Machine Learning
           
 
           
@@ -62,7 +62,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="#" method="get">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -81,8 +81,8 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="3_ml_methods/00_basics/00_index.html">1. Preliminaries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3_ml_methods/02_neural_networks/00_index.html">2. Basic Neural Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_basics/00_index.html">1. Preliminaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02_neural_networks/00_index.html">2. Basic Neural Networks</a></li>
 </ul>
 
             
@@ -97,7 +97,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Study Notes in Machine Learning</a>
+          <a href="../../index.html">Study Notes in Machine Learning</a>
         
       </nav>
 
@@ -126,14 +126,14 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>Search</li>
+      <li><a href="../../index.html">Docs</a> &raquo;</div></li><li>Gaussian Process</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
+            <a href="../../_sources/3_ml_methods/03_prob_methods/01_gp.rst.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
     
@@ -141,23 +141,34 @@
 
   
   <hr/>
-</div>
+
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search
-      functionality.
-    </p>
-  </div>
-  </noscript>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: { extensions: ["color.js","autoload-all.js"] }
+  });
 
-  
-  <div id="search-results">
-  
-  </div>
+      MathJax.Hub.Register.StartupHook("TeX color Ready", function() {
+   var color = MathJax.Extension["TeX/color"];
+   color.colors["theorem"] = color.getColor('RGB','255,229,153');
+       color.colors["result"] = color.getColor('RGB','189,214,238');
+       color.colors["fact"] = color.getColor('RGB','255,255,204');
+       color.colors["emperical"] = color.getColor('RGB','253,240,207');
+       color.colors["comment"] = color.getColor('RGB','204,255,204');
+   color.colors["thm"] = color.getColor('RGB','255,229,153');
+       color.colors["rlt"] = color.getColor('RGB','189,214,238');
+       color.colors["emp"] = color.getColor('RGB','253,240,207');
+       color.colors["comm"] = color.getColor('RGB','204,255,204');
+       color.colors["conn1"] = color.getColor('RGB','255,0,255');
+       color.colors["conn2"] = color.getColor('RGB','237,125,49');
+       color.colors["conn3"] = color.getColor('RGB','112,48,160');
+      });
+</script><div class="section" id="gaussian-process">
+<h1>Gaussian Process<a class="headerlink" href="#gaussian-process" title="Permalink to this headline">¶</a></h1>
+</div>
+
 
            </div>
            
@@ -190,7 +201,7 @@
 
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
+            URL_ROOT:'../../',
             VERSION:'0.0.1',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
@@ -203,7 +214,6 @@
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-      <script type="text/javascript" src="_static/searchtools.js"></script>
 
   
 
@@ -216,14 +226,7 @@
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
-   
-
+  </script> 
 
 </body>
 </html>
