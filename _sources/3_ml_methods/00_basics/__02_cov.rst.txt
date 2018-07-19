@@ -294,7 +294,8 @@ And all others can be defined in the same way, summarized as :math:`\colorbox{fa
  Therefore, we note it is necessary to understand what “:math:`\mathbf{x}`” represents in the context.
 
  The other possible confusion is about the "samples". It is possible both the data entries and feature vectors are referred to as samples in different contexts.
- We again :emp:`note` :red:`sample covariance is always w.r.t. the feature vectors, not data entries`.
+ We again :emp:`note` :red:`sample covariance is always w.r.t. the feature vectors, not data entries`,
+ because it studies how the quantities of different features vary with each other.
  Therefore, the "samples" in :eq:`eq_sample_cov` refers to feature vectors.
 
 

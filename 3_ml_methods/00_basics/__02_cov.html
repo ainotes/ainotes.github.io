@@ -227,7 +227,7 @@ RV vector <span class="math notranslate nohighlight">\(X = \begin{pmatrix} X_{1}
 (1?€?2) by corresponding
 <span class="math notranslate nohighlight">\(\operatorname{corr}\left( \cdot , \cdot \right)\)</span>. Since
 <span class="math notranslate nohighlight">\(\operatorname{corr}\left( X,X \right) = 1\)</span> and
-<span class="math notranslate nohighlight">\(\operatorname{corr}\left( \mathbf{x},\mathbf{x} \right) = 1\)</span>, then <span><span class="result-highlight"> the diagonal elements of a correlation matrix will all be 1</span></span>. Let
+<span class="math notranslate nohighlight">\(\operatorname{corr}\left( \mathbf{x},\mathbf{x} \right) = 1\)</span>, then <span><span class="result-highlight"> the diagonal elements of a correlation matrix will all be 1 </span></span>. Let
 <span class="math notranslate nohighlight">\(\Sigma_{\text{corr}}\)</span> denote a correlation matrix, we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\operatorname{\Sigma_{\text{corr}}} \left( X \right) = \begin{pmatrix}
@@ -285,7 +285,8 @@ The bold small-letter symbol “<span class="math notranslate nohighlight">\(\ma
 but in statistics it often instead represents a feature vector (as in above discussion), and sometimes this causes confusion.
 Therefore, we note it is necessary to understand what “<span class="math notranslate nohighlight">\(\mathbf{x}\)</span>” represents in the context.</p>
 <p class="last">The other possible confusion is about the “samples”. It is possible both the data entries and feature vectors are referred to as samples in different contexts.
-We again <span class="emp">note</span> <span class="red">sample covariance is always w.r.t. the feature vectors, not data entries</span>.
+We again <span class="emp">note</span> <span class="red">sample covariance is always w.r.t. the feature vectors, not data entries</span>,
+because it studies how the quantities of different features vary with each other.
 Therefore, the “samples” in <a class="reference internal" href="00_index.html#equation-eq-sample-cov">Eq.1.2</a> refers to feature vectors.</p>
 </div>
 <ul style="left-margin:20px">
@@ -344,7 +345,7 @@ for exactly the same reason.</p>
 
 <div class="section" id="theorem-1-1-matrix-arithmetics-of-covariance-matrix">
 <span id="theorem-cov-matrix-arithmetic-rules"></span><h2 style="display: inline; font-size:16px"><span class="ititle">Theorem 1-1.</span> <span class="bemp">Matrix arithmetics of covariance matrix.</span><a class="headerlink" href="#theorem-1-1-matrix-arithmetics-of-covariance-matrix" title="Permalink to this headline">¶</a></h2><span><span class="theorem-highlight"> Given <span class="math notranslate nohighlight">\(X = \left( X_{1},\ldots,X_{n} \right)^{\mathrm{T}}\)</span>,
-<span class="math notranslate nohighlight">\(\operatorname{var}\left( \mathbf{α}^{\rm{T}}X \right) = \operatorname{var}\left( X^{\rm{T}}\mathbf{α} \right) = \mathbf{α}^{\rm{T}}\operatorname{\Sigma}\left( X \right)\mathbf{α}\)</span></span></span>.
+<span class="math notranslate nohighlight">\(\operatorname{var}\left( \mathbf{α}^{\rm{T}}X \right) = \operatorname{var}\left( X^{\rm{T}}\mathbf{α} \right) = \mathbf{α}^{\rm{T}}\operatorname{\Sigma}\left( X \right)\mathbf{α}\)</span> </span></span>.
 <span class="emp">Note</span> <span class="math notranslate nohighlight">\(α^{\rm{T}}\Sigma{X}\)</span> is a scalar random variable, and
 <div class="math notranslate nohighlight">
 \[\mathbb{E}\left( \mathrm{\mathbf{α}}^{\mathrm{T}}X \right)\mathbb{= E}\left( X^{\mathrm{T}}\mathrm{\mathbf{α}} \right) = \mathrm{\mathbf{α}}^{\mathrm{T}}\mathbb{E}X = \left( \mathbb{E}^{\mathrm{T}}X \right)\mathrm{\mathbf{α}}\]</div>
@@ -383,7 +384,7 @@ Let <span class="math notranslate nohighlight">\(\mathbf{Y} = \mathbf{\text{XA}}
 then
 <span class="math notranslate nohighlight">\(\colorbox{theorem}{$\Sigma(\mathbf{\text{A}}^{\rm{T}}\mathbf{\mathrm{X}}) = \mathbf{A}^\mathrm{T}\Sigma(\mathbf{X})\mathbf{A}$}\)</span>,
 since <span class="math notranslate nohighlight">\(\ \Sigma\left( \mathbf{a}_{i}^{\rm{T}}\mathbf{X}\mathbf{,}\mathbf{a}_{j}^{\rm{T}}\mathbf{X} \right) = \mathbf{a}_{i}^{\rm{T}}\operatorname{\Sigma}\left( \mathbf{X} \right)\mathbf{a}_{j}\)</span>;
-of course we also have <span><span class="theorem-highlight"> <span class="math notranslate nohighlight">\(\Sigma(\mathbf{A}^{\text{T}}\mathbf{X,}\mathbf{B}^{\rm{T}}\mathbf{Y}) = \mathbf{A}^{\rm{T}}\Sigma(\mathbf{X,Y})\mathbf{B}\)</span> for cross-covariance</span></span>.</p>
+of course we also have <span><span class="theorem-highlight"> <span class="math notranslate nohighlight">\(\Sigma(\mathbf{A}^{\text{T}}\mathbf{X,}\mathbf{B}^{\rm{T}}\mathbf{Y}) = \mathbf{A}^{\rm{T}}\Sigma(\mathbf{X,Y})\mathbf{B}\)</span> for cross-covariance </span></span>.</p>
 <p>For the same reason, <span><span class="theorem-highlight"> a square cross-covariance matrix is positive-semidefinite</span></span>.</p>
 </div></li><li>
 
