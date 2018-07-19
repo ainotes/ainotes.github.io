@@ -174,7 +174,7 @@ beyond the scope of this text. Here we overview basic concepts and
 results that could help better understand machine learning models that
 heavily involve probabilities, like Gaussian process or generative models.</p>
 <p><span style="padding-left:20px"></span> In probability theory, a set <span class="math notranslate nohighlight">\(\Omega\)</span> containing all possible outcomes
-of an  <span><span class="exdef"> <span class="target" id="index-0"></span>experiment</span></span> is called a  <span><span class="exdef"> <span class="target" id="index-1"></span>sample space</span></span>. For example, in the
+of an  <span><span class="exdef"> <span class="target" id="index-0"></span>experiment</span></span> is called a  <span><span class="exdef"> <span class="target" id="index-1"></span>sample space</span></span>. <span class="emp">For example</span>, in the
 experiment of coin flip, we can define <span class="math notranslate nohighlight">\(\Omega = \left\{ 0,1 \right\}\)</span>
 where <span class="math notranslate nohighlight">\(0\)</span> represents head and <span class="math notranslate nohighlight">\(1\)</span> represents tail. <span class="math notranslate nohighlight">\(\Omega\)</span> can be
 finite, countably infinite or uncountably infinite. <span class="emp">Note</span>
@@ -182,7 +182,7 @@ this “experiment” is not a concrete “experiment” we do in machine
 learning to measure performance of a model; rather it is an abstract
 concept, and can be mathematically viewed as being defined by the sample
 space – if we know what the sample space is, then the “experiment” is
-completely determined. For example, if we let
+completely determined. <span class="emp">For example</span>, if we let
 <span class="math notranslate nohighlight">\(\Omega = \left\{ 0,1 \right\}\)</span>, then the experiment behind this
 <span class="math notranslate nohighlight">\(\Omega\)</span> is mathematically equivalent to the coin-flip experiment.</p>
 <p><span style="padding-left:20px"></span> In addition, we define a set <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> that contains subsets of
@@ -190,9 +190,9 @@ completely determined. For example, if we let
 <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> is non-empty; 2) for any <span class="math notranslate nohighlight">\(A\in \mathcal{ F}\)</span> then
 <span class="math notranslate nohighlight">\(\Omega\backslash A\in \mathcal{ F}\)</span>; 3) for countable many
 <span class="math notranslate nohighlight">\(A_{\mathrm{1}},A_{2},\text{...},A_{n}\mathcal{,\ldots \in F}\)</span>, then
-<span class="math notranslate nohighlight">\(\bigcup A_{k}\in \mathcal{ F}\)</span></span></span>. The axioms are actually very intuitive
+<span class="math notranslate nohighlight">\(\bigcup A_{k}\in \mathcal{ F}\)</span> </span></span>. The axioms are actually very intuitive
 if we view 𝜎-algebra as being “modeling”  <span><span class="exdef"> <span class="target" id="index-3"></span>partitions</span></span> of <span class="math notranslate nohighlight">\(\Omega\)</span> and
-“merge” of these partitions. For example, if we have a finite partition
+“unions” of these partitions. <span class="emp">For example</span>, if we have a finite partition
 <span class="math notranslate nohighlight">\(\Omega_{1},\ldots,\Omega_{n}\)</span> of <span class="math notranslate nohighlight">\(\Omega\)</span> s.t.
 <span class="math notranslate nohighlight">\(\Omega_{i}\bigcap\Omega_{j} = \varnothing,\forall i \neq j\)</span> and
 <span class="math notranslate nohighlight">\(\bigcup_{i = 1}^{n}\Omega_{i} = \Omega\)</span>, then the set containing all
@@ -205,10 +205,10 @@ real-life concepts like length, area, volume, etc. The most widely used
 measure is called  <span><span class="exdef"> <span class="target" id="index-9"></span>Lebesgue measure</span></span>, which is consistent with our
 common sense. Under this measure, the length of a line, the area of a
 square, or the volume of a ball, etc. is calculated with our usual
-formulas. <span><span class="fact-highlight"> All ordinary integrations we learned in calculus are w.r.t. Lebesgue measure</span></span>. A measure <span class="math notranslate nohighlight">\(μ\)</span> is formally defined over a 𝜎-algebra <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> as
+formulas. <span><span class="fact-highlight"> All ordinary integrations we learned in calculus are w.r.t. Lebesgue measure </span></span>. A measure <span class="math notranslate nohighlight">\(μ\)</span> is formally defined over a 𝜎-algebra <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> as
 a <span class="math notranslate nohighlight">\(\mathcal{F} \rightarrow \lbrack 0, + \infty)\)</span> function s.t. <span><span class="fact-highlight"> 1)
 <span class="math notranslate nohighlight">\(\mathbb{P}\left( \varnothing \right) = 0\)</span>; 2)
-<span class="math notranslate nohighlight">\(A,B\in \mathcal{ F,}A\bigcap B\mathbb{= \varnothing \Rightarrow P}\left( A \right)\mathbb{+ P}\left( B \right)\mathbb{= P}\left( A\bigcup B \right)\)</span></span></span>.
+<span class="math notranslate nohighlight">\(A,B\in \mathcal{ F,}A\bigcap B\mathbb{= \varnothing \Rightarrow P}\left( A \right)\mathbb{+ P}\left( B \right)\mathbb{= P}\left( A\bigcup B \right)\)</span> </span></span>.
 A measure has many intuitive properties we would expect from “area” or
 “volume”, for example, let <span class="math notranslate nohighlight">\(A,B \in \mathcal{F}\)</span>, then
 <span class="math notranslate nohighlight">\(μ\left( A\bigcup B \right) \leq μ\left( A \right) + μ\left( B \right)\)</span>
@@ -216,7 +216,7 @@ and <span class="math notranslate nohighlight">\(A \subseteq B \Rightarrow μ\le
 Probability is formally defined a measure over each event in
 <span class="math notranslate nohighlight">\(\mathcal{F}\)</span>, called  <span><span class="exdef"> <span class="target" id="index-10"></span>probability measure</span></span>, usually denoted by
 <span class="math notranslate nohighlight">\(\mathbb{P}\)</span>. <span><span class="fact-highlight"> A probability measure has all axioms of a measure, and adds a third axiom
-that <span class="math notranslate nohighlight">\(\mathbb{P}\left( \Omega \right) = 1\)</span></span></span>, called the  <span><span class="exdef"> <span class="target" id="index-11"></span>probability normalization axiom</span></span> . For example, if <span class="math notranslate nohighlight">\(\Omega = \left\{ 0,1 \right\}\)</span>,
+that <span class="math notranslate nohighlight">\(\mathbb{P}\left( \Omega \right) = 1\)</span> </span></span>, called the  <span><span class="exdef"> <span class="target" id="index-11"></span>probability normalization axiom</span></span> . For example, if <span class="math notranslate nohighlight">\(\Omega = \left\{ 0,1 \right\}\)</span>,
 then <span class="math notranslate nohighlight">\(\left\{ \left\{ 0 \right\},\left\{ 1 \right\},\left\{ 0,1 \right\},\varnothing \right\}\)</span>
 is a 𝜎-algebra of <span class="math notranslate nohighlight">\(\Omega\)</span> and we can define
 <span class="math notranslate nohighlight">\(\mathbb{P}\left( \left\{ 0 \right\} \right) = 0.3,\mathbb{P}\left( \left\{ 1 \right\} \right) = 0.7,\mathbb{P}\left( \left\{ 0,1 \right\} \right) = 1,\mathbb{P}\left( \varnothing \right) = 0\)</span>.
@@ -239,8 +239,8 @@ called the  <span><span class="exdef"> <span class="target" id="index-18"></span
 become more complicated, and a theorem called  <span><span class="exdef"> <span class="target" id="index-19"></span>Radom-Nikodym theorem</span></span>
 guarantees <span><span class="fact-highlight"> given any measure <span class="math notranslate nohighlight">\(μ\)</span> defined on the <span class="math notranslate nohighlight">\((S,\mathcal{E})\)</span>, there exists a unique corresponding density function
 <span class="math notranslate nohighlight">\(f\left( x \right):S \rightarrow \left\lbrack 0, + \infty \right\rbrack\)</span>
-consistent with the underlying probability measure <span class="math notranslate nohighlight">\(\mathbb{P}\)</span> in a way that <span class="math notranslate nohighlight">\(\int_{B}^{}f\text{d}μ=\mathbb{P}\left\{ X^{- 1}\left( B \right) \right\}\)</span></span></span>.
-<span><span class="fact-highlight"> If we choose μ as Lebesgue measure, then we have ordinary density functions we commonly use</span></span>.
+consistent with the underlying probability measure <span class="math notranslate nohighlight">\(\mathbb{P}\)</span> in a way that <span class="math notranslate nohighlight">\(\int_{B}^{}f\text{d}μ=\mathbb{P}\left\{ X^{- 1}\left( B \right) \right\}\)</span> </span></span>.
+<span><span class="fact-highlight"> If we choose μ as Lebesgue measure, then we have ordinary density functions we commonly use </span></span>.
 We also refer to <span class="math notranslate nohighlight">\(f\)</span> as the  <span><span class="exdef"> <span class="target" id="index-20"></span>distribution</span></span> of <span class="math notranslate nohighlight">\(X\)</span>, <span class="math notranslate nohighlight">\(X\)</span>  <span><span class="exdef"> <span class="target" id="index-21"></span>obeys</span></span> the
 distribution <span class="math notranslate nohighlight">\(f\)</span>, and <span class="math notranslate nohighlight">\(f\left( x \right)\)</span> is the  <span><span class="exdef"> <span class="target" id="index-22"></span>density</span></span> of the
 distribution at <span class="math notranslate nohighlight">\(x\)</span>. Random-Nikodym applies to both discrete and

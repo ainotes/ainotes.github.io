@@ -167,7 +167,7 @@ results that could help better understand machine learning models that
 heavily involve probabilities, like Gaussian process or generative models.
 
 |para| In probability theory, a set :math:`\Omega` containing all possible outcomes
-of an  |exdef| :index:`experiment` |end-span| is called a  |exdef| :index:`sample space` |end-span|. For example, in the
+of an  |exdef| :index:`experiment` |end-span| is called a  |exdef| :index:`sample space` |end-span|. :emp:`For example`, in the
 experiment of coin flip, we can define :math:`\Omega = \left\{ 0,1 \right\}`
 where :math:`0` represents head and :math:`1` represents tail. :math:`\Omega` can be
 finite, countably infinite or uncountably infinite. :emp:`Note`
@@ -175,7 +175,7 @@ this "experiment" is not a concrete "experiment" we do in machine
 learning to measure performance of a model; rather it is an abstract
 concept, and can be mathematically viewed as being defined by the sample
 space -- if we know what the sample space is, then the "experiment" is
-completely determined. For example, if we let
+completely determined. :emp:`For example`, if we let
 :math:`\Omega = \left\{ 0,1 \right\}`, then the experiment behind this
 :math:`\Omega` is mathematically equivalent to the coin-flip experiment.
 
@@ -186,7 +186,7 @@ completely determined. For example, if we let
 :math:`A_{\mathrm{1}},A_{2},\text{...},A_{n}\mathcal{,\ldots \in F}`, then
 :math:`\bigcup A_{k}\in \mathcal{ F}`  |end-span|. The axioms are actually very intuitive
 if we view 𝜎-algebra as being "modeling"  |exdef| :index:`partitions` |end-span| of :math:`\Omega` and
-"merge" of these partitions. For example, if we have a finite partition
+"unions" of these partitions. :emp:`For example`, if we have a finite partition
 :math:`\Omega_{1},\ldots,\Omega_{n}` of :math:`\Omega` s.t.
 :math:`\Omega_{i}\bigcap\Omega_{j} = \varnothing,\forall i \neq j` and
 :math:`\bigcup_{i = 1}^{n}\Omega_{i} = \Omega`, then the set containing all

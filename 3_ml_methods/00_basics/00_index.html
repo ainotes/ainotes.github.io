@@ -217,7 +217,7 @@ beyond the scope of this text. Here we overview basic concepts and
 results that could help better understand machine learning models that
 heavily involve probabilities, like Gaussian process or generative models.</p>
 <p><span style="padding-left:20px"></span> In probability theory, a set <span class="math notranslate nohighlight">\(\Omega\)</span> containing all possible outcomes
-of an  <span><span class="exdef"> <span class="target" id="index-0"></span>experiment</span></span> is called a  <span><span class="exdef"> <span class="target" id="index-1"></span>sample space</span></span>. For example, in the
+of an  <span><span class="exdef"> <span class="target" id="index-0"></span>experiment</span></span> is called a  <span><span class="exdef"> <span class="target" id="index-1"></span>sample space</span></span>. <span class="emp">For example</span>, in the
 experiment of coin flip, we can define <span class="math notranslate nohighlight">\(\Omega = \left\{ 0,1 \right\}\)</span>
 where <span class="math notranslate nohighlight">\(0\)</span> represents head and <span class="math notranslate nohighlight">\(1\)</span> represents tail. <span class="math notranslate nohighlight">\(\Omega\)</span> can be
 finite, countably infinite or uncountably infinite. <span class="emp">Note</span>
@@ -225,7 +225,7 @@ this “experiment” is not a concrete “experiment” we do in machine
 learning to measure performance of a model; rather it is an abstract
 concept, and can be mathematically viewed as being defined by the sample
 space – if we know what the sample space is, then the “experiment” is
-completely determined. For example, if we let
+completely determined. <span class="emp">For example</span>, if we let
 <span class="math notranslate nohighlight">\(\Omega = \left\{ 0,1 \right\}\)</span>, then the experiment behind this
 <span class="math notranslate nohighlight">\(\Omega\)</span> is mathematically equivalent to the coin-flip experiment.</p>
 <p><span style="padding-left:20px"></span> In addition, we define a set <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> that contains subsets of
@@ -233,9 +233,9 @@ completely determined. For example, if we let
 <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> is non-empty; 2) for any <span class="math notranslate nohighlight">\(A\in \mathcal{ F}\)</span> then
 <span class="math notranslate nohighlight">\(\Omega\backslash A\in \mathcal{ F}\)</span>; 3) for countable many
 <span class="math notranslate nohighlight">\(A_{\mathrm{1}},A_{2},\text{...},A_{n}\mathcal{,\ldots \in F}\)</span>, then
-<span class="math notranslate nohighlight">\(\bigcup A_{k}\in \mathcal{ F}\)</span></span></span>. The axioms are actually very intuitive
+<span class="math notranslate nohighlight">\(\bigcup A_{k}\in \mathcal{ F}\)</span> </span></span>. The axioms are actually very intuitive
 if we view 𝜎-algebra as being “modeling”  <span><span class="exdef"> <span class="target" id="index-3"></span>partitions</span></span> of <span class="math notranslate nohighlight">\(\Omega\)</span> and
-“merge” of these partitions. For example, if we have a finite partition
+“unions” of these partitions. <span class="emp">For example</span>, if we have a finite partition
 <span class="math notranslate nohighlight">\(\Omega_{1},\ldots,\Omega_{n}\)</span> of <span class="math notranslate nohighlight">\(\Omega\)</span> s.t.
 <span class="math notranslate nohighlight">\(\Omega_{i}\bigcap\Omega_{j} = \varnothing,\forall i \neq j\)</span> and
 <span class="math notranslate nohighlight">\(\bigcup_{i = 1}^{n}\Omega_{i} = \Omega\)</span>, then the set containing all
@@ -248,10 +248,10 @@ real-life concepts like length, area, volume, etc. The most widely used
 measure is called  <span><span class="exdef"> <span class="target" id="index-9"></span>Lebesgue measure</span></span>, which is consistent with our
 common sense. Under this measure, the length of a line, the area of a
 square, or the volume of a ball, etc. is calculated with our usual
-formulas. <span><span class="fact-highlight"> All ordinary integrations we learned in calculus are w.r.t. Lebesgue measure</span></span>. A measure <span class="math notranslate nohighlight">\(μ\)</span> is formally defined over a 𝜎-algebra <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> as
+formulas. <span><span class="fact-highlight"> All ordinary integrations we learned in calculus are w.r.t. Lebesgue measure </span></span>. A measure <span class="math notranslate nohighlight">\(μ\)</span> is formally defined over a 𝜎-algebra <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> as
 a <span class="math notranslate nohighlight">\(\mathcal{F} \rightarrow \lbrack 0, + \infty)\)</span> function s.t. <span><span class="fact-highlight"> 1)
 <span class="math notranslate nohighlight">\(\mathbb{P}\left( \varnothing \right) = 0\)</span>; 2)
-<span class="math notranslate nohighlight">\(A,B\in \mathcal{ F,}A\bigcap B\mathbb{= \varnothing \Rightarrow P}\left( A \right)\mathbb{+ P}\left( B \right)\mathbb{= P}\left( A\bigcup B \right)\)</span></span></span>.
+<span class="math notranslate nohighlight">\(A,B\in \mathcal{ F,}A\bigcap B\mathbb{= \varnothing \Rightarrow P}\left( A \right)\mathbb{+ P}\left( B \right)\mathbb{= P}\left( A\bigcup B \right)\)</span> </span></span>.
 A measure has many intuitive properties we would expect from “area” or
 “volume”, for example, let <span class="math notranslate nohighlight">\(A,B \in \mathcal{F}\)</span>, then
 <span class="math notranslate nohighlight">\(μ\left( A\bigcup B \right) \leq μ\left( A \right) + μ\left( B \right)\)</span>
@@ -259,7 +259,7 @@ and <span class="math notranslate nohighlight">\(A \subseteq B \Rightarrow μ\le
 Probability is formally defined a measure over each event in
 <span class="math notranslate nohighlight">\(\mathcal{F}\)</span>, called  <span><span class="exdef"> <span class="target" id="index-10"></span>probability measure</span></span>, usually denoted by
 <span class="math notranslate nohighlight">\(\mathbb{P}\)</span>. <span><span class="fact-highlight"> A probability measure has all axioms of a measure, and adds a third axiom
-that <span class="math notranslate nohighlight">\(\mathbb{P}\left( \Omega \right) = 1\)</span></span></span>, called the  <span><span class="exdef"> <span class="target" id="index-11"></span>probability normalization axiom</span></span> . For example, if <span class="math notranslate nohighlight">\(\Omega = \left\{ 0,1 \right\}\)</span>,
+that <span class="math notranslate nohighlight">\(\mathbb{P}\left( \Omega \right) = 1\)</span> </span></span>, called the  <span><span class="exdef"> <span class="target" id="index-11"></span>probability normalization axiom</span></span> . For example, if <span class="math notranslate nohighlight">\(\Omega = \left\{ 0,1 \right\}\)</span>,
 then <span class="math notranslate nohighlight">\(\left\{ \left\{ 0 \right\},\left\{ 1 \right\},\left\{ 0,1 \right\},\varnothing \right\}\)</span>
 is a 𝜎-algebra of <span class="math notranslate nohighlight">\(\Omega\)</span> and we can define
 <span class="math notranslate nohighlight">\(\mathbb{P}\left( \left\{ 0 \right\} \right) = 0.3,\mathbb{P}\left( \left\{ 1 \right\} \right) = 0.7,\mathbb{P}\left( \left\{ 0,1 \right\} \right) = 1,\mathbb{P}\left( \varnothing \right) = 0\)</span>.
@@ -282,8 +282,8 @@ called the  <span><span class="exdef"> <span class="target" id="index-18"></span
 become more complicated, and a theorem called  <span><span class="exdef"> <span class="target" id="index-19"></span>Radom-Nikodym theorem</span></span>
 guarantees <span><span class="fact-highlight"> given any measure <span class="math notranslate nohighlight">\(μ\)</span> defined on the <span class="math notranslate nohighlight">\((S,\mathcal{E})\)</span>, there exists a unique corresponding density function
 <span class="math notranslate nohighlight">\(f\left( x \right):S \rightarrow \left\lbrack 0, + \infty \right\rbrack\)</span>
-consistent with the underlying probability measure <span class="math notranslate nohighlight">\(\mathbb{P}\)</span> in a way that <span class="math notranslate nohighlight">\(\int_{B}^{}f\text{d}μ=\mathbb{P}\left\{ X^{- 1}\left( B \right) \right\}\)</span></span></span>.
-<span><span class="fact-highlight"> If we choose μ as Lebesgue measure, then we have ordinary density functions we commonly use</span></span>.
+consistent with the underlying probability measure <span class="math notranslate nohighlight">\(\mathbb{P}\)</span> in a way that <span class="math notranslate nohighlight">\(\int_{B}^{}f\text{d}μ=\mathbb{P}\left\{ X^{- 1}\left( B \right) \right\}\)</span> </span></span>.
+<span><span class="fact-highlight"> If we choose μ as Lebesgue measure, then we have ordinary density functions we commonly use </span></span>.
 We also refer to <span class="math notranslate nohighlight">\(f\)</span> as the  <span><span class="exdef"> <span class="target" id="index-20"></span>distribution</span></span> of <span class="math notranslate nohighlight">\(X\)</span>, <span class="math notranslate nohighlight">\(X\)</span>  <span><span class="exdef"> <span class="target" id="index-21"></span>obeys</span></span> the
 distribution <span class="math notranslate nohighlight">\(f\)</span>, and <span class="math notranslate nohighlight">\(f\left( x \right)\)</span> is the  <span><span class="exdef"> <span class="target" id="index-22"></span>density</span></span> of the
 distribution at <span class="math notranslate nohighlight">\(x\)</span>. Random-Nikodym applies to both discrete and
@@ -444,7 +444,7 @@ RV vector <span class="math notranslate nohighlight">\(X = \begin{pmatrix} X_{1}
 (1?€?2) by corresponding
 <span class="math notranslate nohighlight">\(\operatorname{corr}\left( \cdot , \cdot \right)\)</span>. Since
 <span class="math notranslate nohighlight">\(\operatorname{corr}\left( X,X \right) = 1\)</span> and
-<span class="math notranslate nohighlight">\(\operatorname{corr}\left( \mathbf{x},\mathbf{x} \right) = 1\)</span>, then <span><span class="result-highlight"> the diagonal elements of a correlation matrix will all be 1</span></span>. Let
+<span class="math notranslate nohighlight">\(\operatorname{corr}\left( \mathbf{x},\mathbf{x} \right) = 1\)</span>, then <span><span class="result-highlight"> the diagonal elements of a correlation matrix will all be 1 </span></span>. Let
 <span class="math notranslate nohighlight">\(\Sigma_{\text{corr}}\)</span> denote a correlation matrix, we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\operatorname{\Sigma_{\text{corr}}} \left( X \right) = \begin{pmatrix}
@@ -562,13 +562,13 @@ for exactly the same reason.</p>
 
 <div class="section" id="theorem-1-1-matrix-arithmetics-of-covariance-matrix">
 <span id="theorem-cov-matrix-arithmetic-rules"></span><h3 style="display: inline; font-size:16px"><span class="ititle">Theorem 1-1.</span> <span class="bemp">Matrix arithmetics of covariance matrix.</span><a class="headerlink" href="#theorem-1-1-matrix-arithmetics-of-covariance-matrix" title="Permalink to this headline">¶</a></h3><span><span class="theorem-highlight"> Given <span class="math notranslate nohighlight">\(X = \left( X_{1},\ldots,X_{n} \right)^{\mathrm{T}}\)</span>,
-<span class="math notranslate nohighlight">\(\operatorname{var}\left( \mathbf{α}^{\rm{T}}X \right) = \operatorname{var}\left( X^{\rm{T}}\mathbf{α} \right) = \mathbf{α}^{\rm{T}}\operatorname{\Sigma}\left( X \right)\mathbf{α}\)</span></span></span>.
+<span class="math notranslate nohighlight">\(\operatorname{var}\left( \mathbf{α}^{\rm{T}}X \right) = \operatorname{var}\left( X^{\rm{T}}\mathbf{α} \right) = \mathbf{α}^{\rm{T}}\operatorname{\Sigma}\left( X \right)\mathbf{α}\)</span> </span></span>.
 <span class="emp">Note</span> <span class="math notranslate nohighlight">\(α^{\rm{T}}\Sigma{X}\)</span> is a scalar random variable, and
 <div class="math notranslate nohighlight">
 \[\mathbb{E}\left( \mathrm{\mathbf{α}}^{\mathrm{T}}X \right)\mathbb{= E}\left( X^{\mathrm{T}}\mathrm{\mathbf{α}} \right) = \mathrm{\mathbf{α}}^{\mathrm{T}}\mathbb{E}X = \left( \mathbb{E}^{\mathrm{T}}X \right)\mathrm{\mathbf{α}}\]</div>
 <p>Also <span class="math notranslate nohighlight">\(\mathrm{\mathbf{α}}^{\mathrm{T}}X\)</span> is a scalar RV, and so
 <span class="math notranslate nohighlight">\(\left( \mathrm{\mathbf{α}}^{\mathrm{T}}X \right)^{2}={\left( \mathrm{\mathbf{α}}^{\mathrm{T}}X \right)\left( \mathrm{\mathbf{α}}^{\mathrm{T}}X \right)}^{\mathrm{T}} = \mathrm{\mathbf{α}}^{\mathrm{T}}XX^{\mathrm{T}}\mathrm{\mathbf{α}}\)</span>.
-Recall <span class="math notranslate nohighlight">\(\operatorname{var} \left( X \right)=\mathbb{E}X^{2} - \mathbb{E}^{2}X\)</span>, then using <a class="reference internal" href="__02_cov.html#property-cov-to-expectation"><span class="std std-ref">Property 1-1</span></a>, we have</p>
+Recall <span class="math notranslate nohighlight">\(\operatorname{var} \left( X \right)=\mathbb{E}X^{2} - \mathbb{E}^{2}X\)</span>, then using <a class="reference internal" href="#property-cov-to-expectation"><span class="std std-ref">Property 1-1</span></a>, we have</p>
 <div class="math notranslate nohighlight">
 \[\operatorname{var} \left( \mathrm{\mathbf{α}}^{\mathrm{T}}X \right) = \mathbb{E}\mathrm{\lbrack}\mathrm{\mathbf{α}}^{\mathrm{T}}X\left( \mathrm{\mathbf{α}}^{\mathrm{T}}X \right)^{\mathrm{T}}\mathrm{\rbrack} - \mathbb{E}\left\lbrack \mathrm{\mathbf{α}}^{\mathrm{T}}X \right\rbrack\mathbb{E}^{\mathrm{T}}\left\lbrack \mathrm{\mathbf{α}}^{\mathrm{T}}X \right\rbrack = \mathrm{\mathbf{α}}^{\mathrm{T}}\mathbb{E}\mathrm{\lbrack}XX^{\mathrm{T}}\mathrm{\rbrack}\mathrm{\mathbf{α}} - \mathrm{\mathbf{α}}^{\mathrm{T}}\mathbb{E}X\mathbb{E}^{\mathrm{T}}X\mathrm{\mathbf{α}}=\mathrm{\mathbf{α}}^{\mathrm{T}}\mathbf{(}\mathbb{E}\mathrm{\lbrack}XX^{\mathrm{T}}\mathrm{\rbrack} - \mathbb{E}X\mathbb{E}^{\mathrm{T}}X\mathrm{)}\mathrm{\mathbf{α}}=\mathrm{\mathbf{α}}^{\mathrm{T}}\operatorname{\Sigma}\left( X \right)\mathrm{\mathbf{α}}\]</div>
 <p>Similarly, using
@@ -601,12 +601,12 @@ Let <span class="math notranslate nohighlight">\(\mathbf{Y} = \mathbf{\text{XA}}
 then
 <span class="math notranslate nohighlight">\(\colorbox{theorem}{$\Sigma(\mathbf{\text{A}}^{\rm{T}}\mathbf{\mathrm{X}}) = \mathbf{A}^\mathrm{T}\Sigma(\mathbf{X})\mathbf{A}$}\)</span>,
 since <span class="math notranslate nohighlight">\(\ \Sigma\left( \mathbf{a}_{i}^{\rm{T}}\mathbf{X}\mathbf{,}\mathbf{a}_{j}^{\rm{T}}\mathbf{X} \right) = \mathbf{a}_{i}^{\rm{T}}\operatorname{\Sigma}\left( \mathbf{X} \right)\mathbf{a}_{j}\)</span>;
-of course we also have <span><span class="theorem-highlight"> <span class="math notranslate nohighlight">\(\Sigma(\mathbf{A}^{\text{T}}\mathbf{X,}\mathbf{B}^{\rm{T}}\mathbf{Y}) = \mathbf{A}^{\rm{T}}\Sigma(\mathbf{X,Y})\mathbf{B}\)</span> for cross-covariance</span></span>.</p>
+of course we also have <span><span class="theorem-highlight"> <span class="math notranslate nohighlight">\(\Sigma(\mathbf{A}^{\text{T}}\mathbf{X,}\mathbf{B}^{\rm{T}}\mathbf{Y}) = \mathbf{A}^{\rm{T}}\Sigma(\mathbf{X,Y})\mathbf{B}\)</span> for cross-covariance </span></span>.</p>
 <p>For the same reason, <span><span class="theorem-highlight"> a square cross-covariance matrix is positive-semidefinite</span></span>.</p>
 </div></li><li>
 
 <div class="section" id="theorem-1-2-positive-definiteness-of-covariance-matrix">
-<span id="theorem-cov-semipositiveness"></span><h3 style="display: inline; font-size:16px"><span class="ititle">Theorem 1-2.</span> <span class="bemp">Positive definiteness of covariance matrix.</span><a class="headerlink" href="#theorem-1-2-positive-definiteness-of-covariance-matrix" title="Permalink to this headline">¶</a></h3><span><span class="theorem-highlight"> Covariance matrix is clearly symmetric, and moreover they are semi-positive definite</span></span>, since for any constant vector <span class="math notranslate nohighlight">\(\mathbf{α}\)</span>, using <a class="reference internal" href="__02_cov.html#theorem-cov-matrix-arithmetic-rules"><span class="std std-ref">Theorem 1-1</span></a>, we have
+<span id="theorem-cov-semipositiveness"></span><h3 style="display: inline; font-size:16px"><span class="ititle">Theorem 1-2.</span> <span class="bemp">Positive definiteness of covariance matrix.</span><a class="headerlink" href="#theorem-1-2-positive-definiteness-of-covariance-matrix" title="Permalink to this headline">¶</a></h3><span><span class="theorem-highlight"> Covariance matrix is clearly symmetric, and moreover they are semi-positive definite</span></span>, since for any constant vector <span class="math notranslate nohighlight">\(\mathbf{α}\)</span>, using <a class="reference internal" href="#theorem-cov-matrix-arithmetic-rules"><span class="std std-ref">Theorem 1-1</span></a>, we have
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
 {{\mathbf{α }}^{\text{T}}}\left( {\Sigma \left( X \right)} \right){\mathbf{α }} &amp;= \Sigma \left( {{{\mathbf{α }}^{\text{T}}}X} \right) \hfill \\
@@ -736,7 +736,7 @@ Gaussian). <span class="emp">Note</span> <span class="math notranslate nohighlig
 Euclidean distance from observation <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> to mean <span class="math notranslate nohighlight">\(\mathbf{μ}\)</span>
 when the covariance is identity. Recall the basic fact that co-variance
 matrix is symmetric and positive semidefinite, and in the case of
-Gaussian <span class="tooltip"> it must be positive definite <span class="tooltiptext"> This is because <span class="math notranslate nohighlight">\(|Σ|≠0\)</span>; otherwise the Gaussian density of <a class="reference internal" href="#equation-eq-gaussian-density">Eq.1.6</a> would be invalid. Therefore, all eigenvalues of Σ must be positive, because the determinant equals to the product of all eigenvalues.</span></span>, thus
+Gaussian <span class="tooltip"> it must be positive definite <span class="tooltiptext"> This is because <span class="math notranslate nohighlight">\(|Σ|≠0\)</span>; otherwise the Gaussian density of <a class="reference internal" href="#equation-eq-gaussian-density">Eq.1.6</a> would be invalid. Therefore, all eigenvalues of Σ must be positive, because the determinant equals to the product of all eigenvalues. </span></span>, thus
 <span class="math notranslate nohighlight">\(𝒹_{M}\left( \mathbf{x};\mathbf{μ,\Sigma} \right) \geq 0\)</span>
 and <span class="math notranslate nohighlight">\(𝒹_{M}\left( \mathbf{x};\mathbf{μ,\Sigma} \right) = 0\)</span>
 iff <span class="math notranslate nohighlight">\(\mathbf{x} = \mathbf{μ}\)</span>. The inverse of covariance matrix
@@ -772,12 +772,12 @@ log-likelihood is
 <div class="math notranslate nohighlight">
 \[L \propto \sum_{i = 1}^{N}{- \frac{1}{2}\log\left| \mathbf{\Sigma} \right| - \frac{1}{2}\left( \mathbf{x}_{i} - \mathbf{μ} \right)^{\rm{T}}\mathbf{\Sigma}^{- 1}\left( \mathbf{x}_{i} - \mathbf{μ} \right)}
 = \frac{N}{2}\log\left| \mathbf{\Sigma}^{- 1} \right| - \frac{1}{2}\sum_{i = 1}^{N}{\left( \mathbf{x}_{i} - \mathbf{μ} \right)^{\rm{T}}\mathbf{\Sigma}^{- 1}\left( \mathbf{x}_{i} - \mathbf{μ} \right)}\]</div>
-<p>Using <a class="reference internal" href="__03_gaussian.html#fact-gradient-determinant"><span class="std std-ref">Fact 1-2</span></a> and <a class="reference internal" href="__03_gaussian.html#fact-gradient-matrix-of-matrix-product"><span class="std std-ref">Fact 1-3</span></a>, we have</p>
+<p>Using <a class="reference internal" href="#fact-gradient-determinant"><span class="std std-ref">Fact 1-2</span></a> and <a class="reference internal" href="#fact-gradient-matrix-of-matrix-product"><span class="std std-ref">Fact 1-3</span></a>, we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-gaussian-mle-inf">
 <span class="eqno">(1.7)<a class="headerlink" href="#equation-eq-gaussian-mle-inf" title="Permalink to this equation">¶</a></span>\[\frac{\partial L}{\partial\mathbf{\Sigma}^{- 1}}
 = \frac{N}{2}\mathbf{\Sigma}^{\rm{T}} - \frac{1}{2}\sum_{i = 1}^{N}{\left( \mathbf{x}_{i} - \mathbf{μ} \right)\left( \mathbf{x}_{i} - \mathbf{μ} \right)^{\rm{T}}}
 = 0 \Rightarrow \mathbf{\Sigma}=\frac{1}{N}\sum_{i = 1}^{N}{\left( \mathbf{x}_{i} - \mathbf{μ} \right)\left( \mathbf{x}_{i} - \mathbf{μ} \right)^{\rm{T}}}\]</div>
-<p>Then for <span class="math notranslate nohighlight">\(\mathbf{μ}\)</span>, using <a class="reference internal" href="__03_gaussian.html#fact-gradient-vector-of-matrix-product"><span class="std std-ref">Fact 1-4</span></a>,</p>
+<p>Then for <span class="math notranslate nohighlight">\(\mathbf{μ}\)</span>, using <a class="reference internal" href="#fact-gradient-vector-of-matrix-product"><span class="std std-ref">Fact 1-4</span></a>,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
 &amp; L \propto \sum_{i = 1}^{N}{\mathbf{x}_{i}^{\rm{T}}\mathbf{\Sigma}^{- 1}\mathbf{μ} - \frac{1}{2}\mathbf{μ}^{\rm{T}}\mathbf{\Sigma}^{- 1}\mathbf{μ}} \\
@@ -786,12 +786,12 @@ log-likelihood is
 <p>Plug back to <span class="math notranslate nohighlight">\(\mathbf{\Sigma}^{- 1}\)</span> in (1?€?7) and we have</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{\Sigma}_{\text{ML}}=\frac{1}{N}\sum_{i = 1}^{N}{\left( \mathbf{x}_{i} - \overline{\mathbf{x}} \right)\left( \mathbf{x}_{i} - \overline{\mathbf{x}} \right)^{\rm{T}}}\]</div>
-<p>By <a class="reference internal" href="__02_cov.html#property-cov-as-rank1-sum"><span class="std std-ref">Property 1-3</span></a>, <span><span class="result-highlight"> <span class="math notranslate nohighlight">\(\mathbf{\Sigma}_{\text{ML}}\)</span> equals the biased sample covariance</span></span>, or <span><span class="result-highlight"> <span class="math notranslate nohighlight">\(\frac{N}{N - 1}\mathbf{\Sigma}_{\text{ML}}\)</span> equals the sample covariance matrix</span></span></p>
+<p>By <a class="reference internal" href="#property-cov-as-rank1-sum"><span class="std std-ref">Property 1-3</span></a>, <span><span class="result-highlight"> <span class="math notranslate nohighlight">\(\mathbf{\Sigma}_{\text{ML}}\)</span> equals the biased sample covariance</span></span>, or <span><span class="result-highlight"> <span class="math notranslate nohighlight">\(\frac{N}{N - 1}\mathbf{\Sigma}_{\text{ML}}\)</span> equals the sample covariance matrix</span></span></p>
 </div></li><li> Treating samples <span class="math notranslate nohighlight">\(\mathbf{x,y}\)</span> drawn from
 <span class="math notranslate nohighlight">\(\operatorname{Gaussian}\left( \mathbf{μ},\mathbf{\Sigma} \right)\)</span> as
 two RV vector where
 <span class="math notranslate nohighlight">\(\mathbb{E}\mathbf{x} = \mathbb{E}\mathbf{y} = \mathbf{μ}\)</span>, recall we have <span class="math notranslate nohighlight">\(\mathbf{\Sigma =}\mathbb{E}\left\lbrack \mathbf{x}\mathbf{y}^{\rm{T}} \right\rbrack-\mathbf{μ}\mathbf{μ}^{\rm{T}}\)</span>
-or <span class="math notranslate nohighlight">\(\mathbb{E}\left\lbrack \mathbf{x}\mathbf{y}^{\rm{T}} \right\rbrack=\mathbf{μ}\mathbf{μ}^{\rm{T}}\mathbf{+ \Sigma}\)</span> by <a class="reference internal" href="__02_cov.html#property-cov-to-expectation"><span class="std std-ref">Property 1-1</span></a>. When <span class="math notranslate nohighlight">\(\mathbf{x},\mathbf{y}\)</span> are independent, we have
+or <span class="math notranslate nohighlight">\(\mathbb{E}\left\lbrack \mathbf{x}\mathbf{y}^{\rm{T}} \right\rbrack=\mathbf{μ}\mathbf{μ}^{\rm{T}}\mathbf{+ \Sigma}\)</span> by <a class="reference internal" href="#property-cov-to-expectation"><span class="std std-ref">Property 1-1</span></a>. When <span class="math notranslate nohighlight">\(\mathbf{x},\mathbf{y}\)</span> are independent, we have
 <span class="math notranslate nohighlight">\(\mathbb{E}\left\lbrack \mathbf{x}\mathbf{y}^{\rm{T}} \right\rbrack=\mathbf{μ}\mathbf{μ}^{\rm{T}}\)</span>.
 
 <div class="section" id="theorem-1-2-bias-of-gaussian-mle">
@@ -838,14 +838,14 @@ because <span class="math notranslate nohighlight">\(\mathbf{A}^{- 1}\)</span> a
 <span id="property-guassian-ellipsoid-contour"></span><h3 style="display: inline; font-size:16px"><span class="ititle">Property 1-1.</span> <span class="bemp">Shape of contours of Gaussian density.</span><a class="headerlink" href="#property-1-1-shape-of-contours-of-gaussian-density" title="Permalink to this headline">¶</a></h3>Recall the  <span><span class="exdef"> <span class="target" id="index-69"></span>Mahalanobis distance</span></span>
 <span class="math notranslate nohighlight">\(𝒹_{M}\left( \mathbf{x};\mathbf{μ,\Sigma} \right) = \left( \mathbf{x} - \mathbf{μ} \right)^{\rm{T}}\mathbf{\Sigma}^{- 1}\left( \mathbf{x} - \mathbf{μ} \right)\)</span>.
 Let <span class="math notranslate nohighlight">\(𝜆_{1},\ldots,𝜆_{m}\)</span> be the eigenvalues of <span class="math notranslate nohighlight">\(\mathbf{\Sigma}\)</span>, then
-<span class="math notranslate nohighlight">\(\mathbf{\Sigma}^{- 1} = \sum_{i = 1}^{k}{𝜆_{i}^{- 1}\mathbf{q}_{i}\mathbf{q}_{i}^{\rm{T}}}\)</span> as a result of <a class="reference internal" href="__03_gaussian.html#fact-matrix-as-rank1-sum"><span class="std std-ref">Fact 1-5</span></a>, and
+<span class="math notranslate nohighlight">\(\mathbf{\Sigma}^{- 1} = \sum_{i = 1}^{k}{𝜆_{i}^{- 1}\mathbf{q}_{i}\mathbf{q}_{i}^{\rm{T}}}\)</span> as a result of <a class="reference internal" href="#fact-matrix-as-rank1-sum"><span class="std std-ref">Fact 1-5</span></a>, and
 <div class="math notranslate nohighlight">
 \[𝒹_{M}\left( \mathbf{x};\mathbf{μ,\Sigma} \right) = \sum_{i = 1}^{k}{𝜆_{i}^{- 1}\left( \mathbf{x} - \mathbf{μ} \right)^{\rm{T}}\mathbf{q}_{i}\mathbf{q}_{i}^{\rm{T}}}\left( \mathbf{x} - \mathbf{μ} \right) = \sum_{i = 1}^{k}{\left( \frac{1}{\sqrt{𝜆_{i}}}\mathbf{q}_{i}^{\rm{T}}\left( \mathbf{x} - \mathbf{μ} \right) \right)^{\rm{T}}\left( \frac{1}{\sqrt{𝜆_{i}}}\mathbf{q}_{i}^{\rm{T}}\left( \mathbf{x} - \mathbf{μ} \right) \right)}\]</div>
 <p>Therefore,
 <span><span class="result-highlight"> <span class="math notranslate nohighlight">\(𝒹_{M}\left( \mathbf{x};\mathbf{μ,\Sigma} \right) = \sum_{i = 1}^{k}z_{i}^{2} = \mathbf{z}^{\rm{T}}\mathbf{z}\)</span>
 where <span class="math notranslate nohighlight">\(z_{i} = \frac{1}{\sqrt{𝜆_{i}}}\mathbf{q}_{i}^{\rm{T}}\left( \mathbf{x} - \mathbf{μ} \right)\)</span>
 and <span class="math notranslate nohighlight">\(\mathbf{z} = \mathbf{\Lambda}^{- \frac{1}{2}}\mathbf{Q}\left( \mathbf{x} - \mathbf{μ} \right) = \left( z_{1},\ldots,z_{m} \right)^{\rm{T}}\)</span>,
-and <span class="math notranslate nohighlight">\(\mathbf{x} = \mathbf{\Lambda}^{\frac{1}{2}}\mathbf{Q}^{\rm{T}}\mathbf{z}\mathbf{+}\mathbf{μ}\)</span>.</span></span></p>
+and <span class="math notranslate nohighlight">\(\mathbf{x} = \mathbf{\Lambda}^{\frac{1}{2}}\mathbf{Q}^{\rm{T}}\mathbf{z}\mathbf{+}\mathbf{μ}\)</span>. </span></span></p>
 <p>Recall an orthonormal matrix represents a rotation (oriented rotation, to be exact), then
 <span class="math notranslate nohighlight">\(\mathbf{\Lambda}^{\frac{1}{2}}\mathbf{Q}^{\rm{T}}\left( \cdot \right)\mathbf{+}\mathbf{μ}\)</span>
 geometrically transforms the standard frame on a unit circle to a frame on an ellipsoid centered at <span class="math notranslate nohighlight">\(\mathbf{μ}\)</span>, and <span class="math notranslate nohighlight">\(\mathbf{z}\)</span> is the
@@ -854,12 +854,12 @@ given a contour level <span class="math notranslate nohighlight">\(p\left( \math
 <span class="math notranslate nohighlight">\(\mathbf{z}^{\rm{T}}\mathbf{z =}c \Rightarrow \left\| \mathbf{z} \right\|_{2} = \sqrt{c}\)</span>
 for some constant <span class="math notranslate nohighlight">\(c\)</span> (i.e. the contour is a circle w.r.t. the ellipsoid frame), and then any <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> s.t.
 <span class="math notranslate nohighlight">\(\left\| \mathbf{z} \right\|_{2} = \sqrt{c}\)</span> will be on an ellipsoid centered at <span class="math notranslate nohighlight">\(\mathbf{μ}\)</span>.
-Therefore, <span><span class="result-highlight"> the contours of multivariate Gaussian density are ellipsoids</span></span>.</p>
-</div></div></div></li><li>
+Therefore, <span><span class="result-highlight"> the contours of multivariate Gaussian density are ellipsoids </span></span>.</p>
+</div></li><li>
 <p id="lemma-guassian-special-exponential-term-format"><span class="ititle">Lemma 1-1.</span> <span><span class="result-highlight"> If a density function
 <span class="math notranslate nohighlight">\(p\left( \mathbf{x} \right) \propto \exp\left\{ - \frac{1}{2}\mathbf{x}^{\rm{T}}\mathbf{Ax +}\mathbf{x}^{\rm{T}}\mathbf{\text{Ay}} \right\}\)</span>
 where <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> is symmetric positive semidefinite, then <span class="math notranslate nohighlight">\(p\)</span> must be Gaussian with precision <span class="math notranslate nohighlight">\(\mathbf{Ⲗ}=\mathbf{A}\)</span> and mean
-<span class="math notranslate nohighlight">\(\mathbf{μ} = \mathbf{y}\)</span></span></span>. This is simply we can rearrange it as</p>
+<span class="math notranslate nohighlight">\(\mathbf{μ} = \mathbf{y}\)</span> </span></span>. This is simply we can rearrange it as</p>
 <div class="math notranslate nohighlight">
 \[p\left( \mathbf{x} \right) \propto \exp\left\{ - \frac{1}{2}\left( \mathbf{x - y} \right)^{\rm{T}}\mathbf{A}\left( \mathbf{x}-\mathbf{y} \right)-\mathbf{y}^{\rm{T}}\mathbf{\text{Ay}} \right\} \propto \exp\left\{ - \frac{1}{2}\left( \mathbf{x - y} \right)^{\rm{T}}\mathbf{A}\left( \mathbf{x}-\mathbf{y} \right) \right\}\]</div>
 <p>There is no need to worry about normalization, since we have assumed <span class="math notranslate nohighlight">\(p\)</span> is a density, where its normalization is guaranteed.</p>
@@ -872,7 +872,7 @@ have the following with all inverses valid</p>
 \end{pmatrix}^{- 1} = \begin{pmatrix}
 \mathbf{A}^{- 1}\left( \mathbf{I}\mathbf{+}\mathbf{\text{BMC}}\mathbf{A}^{- 1} \right) &amp; - \mathbf{A}^{- 1}\mathbf{\text{BM}} \\
 - \mathbf{\text{MC}}\mathbf{A}^{- 1} &amp; \mathbf{M} \\
-\end{pmatrix},\mathbf{M} = \left( \mathbf{D} - \mathbf{C}\mathbf{A}^{- 1}\mathbf{B} \right)^{- 1}$}\end{split}\]
+\end{pmatrix},\mathbf{M} = \left( \mathbf{D} - \mathbf{C}\mathbf{A}^{- 1}\mathbf{B} \right)^{- 1}$}\end{split}\]</div>
 <p>and if <span class="math notranslate nohighlight">\(\mathbf{D}\)</span> is non-singular, we have the following with all
 inverses valid,</p>
 <div class="math notranslate nohighlight">
@@ -882,7 +882,7 @@ inverses valid,</p>
 \end{pmatrix}^{- 1} = \begin{pmatrix}
 \mathbf{M} &amp; - \mathbf{\text{MB}}\mathbf{D}^{- 1} \\
 - \mathbf{D}^{- 1}\mathbf{\text{CM}} &amp; \mathbf{D}^{- 1}\left( \mathbf{I} + \mathbf{\text{CMB}}\mathbf{D}^{- 1} \right) \\
-\end{pmatrix},\mathbf{M} = \left( \mathbf{A} - \mathbf{B}\mathbf{D}^{- 1}\mathbf{C} \right)^{- 1}$}\end{split}\]
+\end{pmatrix},\mathbf{M} = \left( \mathbf{A} - \mathbf{B}\mathbf{D}^{- 1}\mathbf{C} \right)^{- 1}$}\end{split}\]</div>
 
 <div class="section" id="theorem-1-3-conditional-density-of-multivariate-guassian">
 <span id="theorem-gaussian-conditional-density"></span><h3 style="display: inline; font-size:16px"><span class="ititle">Theorem 1-3.</span> <span class="bemp">Conditional density of multivariate Guassian.</span><a class="headerlink" href="#theorem-1-3-conditional-density-of-multivariate-guassian" title="Permalink to this headline">¶</a></h3>Given
@@ -897,13 +897,13 @@ Assume <span class="math notranslate nohighlight">\(\mathbf{\Sigma}_{{aa}}\)</sp
 &amp;= - \frac{1}{2}\left( \mathbf{x}_{a}-\mathbf{μ}_{a} \right)^{\rm{T}}\mathbf{Ⲗ}_{{aa}}\left( \mathbf{x}_{a}-\mathbf{μ}_{a} \right) - \left( \mathbf{x}_{a}-\mathbf{μ}_{a} \right)^{\rm{T}}\mathbf{Ⲗ}_{{ab}}\left( \mathbf{x}_{b}-\mathbf{μ}_{b} \right)-\frac{1}{2}\left( \mathbf{x}_{b}-\mathbf{μ}_{b} \right)^{\rm{T}}\mathbf{Ⲗ}_{{bb}}\left( \mathbf{x}_{b}-\mathbf{μ}_{b} \right) \\
 &amp;= - \frac{1}{2}\mathbf{x}_{a}^{\rm{T}}\mathbf{Ⲗ}_{{aa}}\mathbf{x}_{a} + \mathbf{x}_{a}^{\rm{T}}\mathbf{Ⲗ}_{{aa}}\mathbf{μ}_{a}-\mathbf{x}_{a}^{\rm{T}}\mathbf{Ⲗ}_{{ab}}\left( \mathbf{x}_{b}-\mathbf{μ}_{b} \right)\mathbf{+}\text{constant} \\
 &amp;= - \frac{1}{2}\mathbf{x}_{a}^{\rm{T}}\mathbf{Ⲗ}_{{aa}}\mathbf{x}_{a} + \mathbf{x}_{a}^{\rm{T}}\mathbf{Ⲗ}_{{aa}}\left( \mathbf{μ}_{a}-\mathbf{Ⲗ}_{{aa}}^{- 1}\mathbf{Ⲗ}_{{ab}}\left( \mathbf{x}_{b}-\mathbf{μ}_{b} \right) \right)\mathbf{+}\text{constant} \end{aligned}\end{split}\]</div>
-<p>By <a class="reference internal" href="__03_gaussian.html#lemma-guassian-special-exponential-term-format"><span class="std std-ref">Lemma 1-1</span></a>, it follows that <span><span class="theorem-highlight"> if <span class="math notranslate nohighlight">\(\mathbf{\Sigma}_{{aa}}\)</span> is
-non-singular, then <span class="math notranslate nohighlight">\(p\left( \mathbf{x}_{a}\mathbf{|}\mathbf{x}_{b} \right)\)</span> is Gaussian</span></span>.
+<p>By <a class="reference internal" href="#lemma-guassian-special-exponential-term-format"><span class="std std-ref">Lemma 1-1</span></a>, it follows that <span><span class="theorem-highlight"> if <span class="math notranslate nohighlight">\(\mathbf{\Sigma}_{{aa}}\)</span> is
+non-singular, then <span class="math notranslate nohighlight">\(p\left( \mathbf{x}_{a}\mathbf{|}\mathbf{x}_{b} \right)\)</span> is Gaussian </span></span>.
 Denote <span class="math notranslate nohighlight">\(\mathbf{x}_{a}\mathbf{|}\mathbf{x}_{b}\mathbf{\sim}\operatorname{Gaussian}\left( \mathbf{μ}_{a|b}\mathbf{,}\mathbf{\Sigma}_{a|b} \right)\)</span>, we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-gaussian-conditional-mean-and-cov-a">
 <span class="eqno">(1.9)<a class="headerlink" href="#equation-eq-gaussian-conditional-mean-and-cov-a" title="Permalink to this equation">¶</a></span>\[\colorbox{theorem}{$\mathbf{μ}_{a|b}=\mathbf{μ}_{a}-\mathbf{Ⲗ}_{{aa}}^{- 1}\mathbf{Ⲗ}_{{ab}}\left( \mathbf{x}_{b}-\mathbf{μ}_{b} \right)\mathbf{,}\mathbf{\Sigma}_{a|b}=\mathbf{Ⲗ}_{{aa}}^{- 1}$}\]</div>
 <p>If in addition <span class="math notranslate nohighlight">\(\mathbf{\Sigma}_{{bb}}\)</span> is non-singular, using
-<a class="reference internal" href="__03_gaussian.html#fact-matrix-block-inverse"><span class="std std-ref">Fact 1-6</span></a> and <span class="math notranslate nohighlight">\(\begin{pmatrix} \mathbf{\Sigma}_{{aa}} &amp; \mathbf{\Sigma}_{{ab}} \\ \mathbf{\Sigma}_{{ba}} &amp; \mathbf{\Sigma}_{{bb}} \\ \end{pmatrix}^{- 1} = \begin{pmatrix} \mathbf{Ⲗ}_{{aa}} &amp; \mathbf{Ⲗ}_{{ab}} \\ \mathbf{Ⲗ}_{{ba}} &amp; \mathbf{Ⲗ}_{{bb}} \\ \end{pmatrix}\)</span>, we have</p>
+<a class="reference internal" href="#fact-matrix-block-inverse"><span class="std std-ref">Fact 1-6</span></a> and <span class="math notranslate nohighlight">\(\begin{pmatrix} \mathbf{\Sigma}_{{aa}} &amp; \mathbf{\Sigma}_{{ab}} \\ \mathbf{\Sigma}_{{ba}} &amp; \mathbf{\Sigma}_{{bb}} \\ \end{pmatrix}^{- 1} = \begin{pmatrix} \mathbf{Ⲗ}_{{aa}} &amp; \mathbf{Ⲗ}_{{ab}} \\ \mathbf{Ⲗ}_{{ba}} &amp; \mathbf{Ⲗ}_{{bb}} \\ \end{pmatrix}\)</span>, we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\left\{ {\begin{array}{*{20}{l}}
 {{Ⲗ _{aa}} = {{\left( {{{\mathbf{\Sigma }}_{aa}} - {{\mathbf{\Sigma }}_{ab}}{\mathbf{\Sigma }}_{bb}^{ - 1}{{\mathbf{\Sigma }}_{ba}}} \right)}^{ - 1}}} \\
@@ -924,7 +924,7 @@ Denote <span class="math notranslate nohighlight">\(\mathbf{x}_{a}\mathbf{|}\mat
 &amp;= - \frac{1}{2}\mathbf{x}_{b}^{\rm{T}}\mathbf{Ⲗ}_{{bb}}\mathbf{x}_{b} + \mathbf{x}_{b}^{\rm{T}}\mathbf{Ⲗ}_{{bb}}\mathbf{μ}_{b}-\mathbf{x}_{b}^{\rm{T}}\mathbf{Ⲗ}_{{ba}}\left( \mathbf{x}_{a}-\mathbf{μ}_{a} \right)\mathbf{+}\text{constant} \\
 &amp;= - \frac{1}{2}\mathbf{x}_{b}^{\rm{T}}\mathbf{Ⲗ}_{{bb}}\mathbf{x}_{b} + \mathbf{x}_{b}^{\rm{T}}\mathbf{Ⲗ}_{{bb}}\left( \mathbf{μ}_{b}-\mathbf{Ⲗ}_{{bb}}^{- 1}\mathbf{Ⲗ}_{{ba}}\left( \mathbf{x}_{a}-\mathbf{μ}_{a} \right) \right)\mathbf{+}\text{constant}\end{aligned}\end{split}\]</div>
 <p>If in addition <span class="math notranslate nohighlight">\(\mathbf{\Sigma}_{{aa}}\)</span> is non-singular, using
-<a class="reference internal" href="__03_gaussian.html#fact-matrix-block-inverse"><span class="std std-ref">Fact 1-6</span></a> we have</p>
+<a class="reference internal" href="#fact-matrix-block-inverse"><span class="std std-ref">Fact 1-6</span></a> we have</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{Ⲗ}_{{bb}}^{- 1}\mathbf{Ⲗ}_{{ba}}\mathbf{= -}\mathbf{\Sigma}_{{ba}}\mathbf{\Sigma}_{{aa}}^{- 1}\mathbf{,}\mathbf{Ⲗ}_{{bb}}^{- 1}=\mathbf{\Sigma}_{{bb}}-\mathbf{\Sigma}_{{ba}}\mathbf{\Sigma}_{{aa}}^{- 1}\mathbf{\Sigma}_{{ab}}\]</div>
 <p>Finally,</p>
@@ -932,9 +932,9 @@ Denote <span class="math notranslate nohighlight">\(\mathbf{x}_{a}\mathbf{|}\mat
 \[\colorbox{theorem}{$\mathbf{μ}_{b|a}=\mathbf{μ}_{b}-\mathbf{Ⲗ}_{{bb}}^{- 1}\mathbf{Ⲗ}_{{ba}}\left( \mathbf{x}_{a}-\mathbf{μ}_{a} \right)=\mathbf{μ}_{b}\mathbf{+}\mathbf{\Sigma}_{{ba}}\mathbf{\Sigma}_{{aa}}^{- 1}\left( \mathbf{x}_{a}-\mathbf{μ}_{a} \right)$}\]</div>
 <div class="math notranslate nohighlight" id="equation-eq-gaussian-conditional-covariance-b">
 <span class="eqno">(1.10)<a class="headerlink" href="#equation-eq-gaussian-conditional-covariance-b" title="Permalink to this equation">¶</a></span>\[\colorbox{theorem}{$\mathbf{\Sigma}_{b|a}=\mathbf{Ⲗ}_{{bb}}^{- 1}=\mathbf{\Sigma}_{{bb}}-\mathbf{\Sigma}_{{ba}}\mathbf{\Sigma}_{{aa}}^{- 1}\mathbf{\Sigma}_{{ab}}$}\]</div>
-<p>We <span class="emp">note</span> 1) <span><span class="comment-highlight"> the conditional mean and variance can be simpler in terms of precision, as seen in <a class="reference internal" href="#equation-eq-gaussian-conditional-mean-and-cov-a">Eq.1.9</a> and <a class="reference internal" href="#equation-eq-gaussian-conditional-covariance-b">Eq.1.10</a></span></span>;
+<p>We <span class="emp">note</span> 1) <span><span class="comment-highlight"> the conditional mean and variance can be simpler in terms of precision, as seen in <a class="reference internal" href="#equation-eq-gaussian-conditional-mean-and-cov-a">Eq.1.9</a> and <a class="reference internal" href="#equation-eq-gaussian-conditional-covariance-b">Eq.1.10</a> </span></span>;
 2) <span><span class="comment-highlight"> the conditional mean <span class="math notranslate nohighlight">\(\mathbf{μ}_{a|b}\)</span> is independent of <span class="math notranslate nohighlight">\(\mathbf{x}_{a}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{μ}_{b|a}\)</span> is independent of
-<span class="math notranslate nohighlight">\(\mathbf{x}_{b}\)</span>, and both <span class="math notranslate nohighlight">\(\mathbf{\Sigma}_{a|b}\mathbf{,}\mathbf{\Sigma}_{b|a}\)</span> are independent of <span class="math notranslate nohighlight">\(\mathbf{x}\)</span></span></span>, which is expected because the conditional mean and covariance should be determined by the distribution itself and the conditions,
+<span class="math notranslate nohighlight">\(\mathbf{x}_{b}\)</span>, and both <span class="math notranslate nohighlight">\(\mathbf{\Sigma}_{a|b}\mathbf{,}\mathbf{\Sigma}_{b|a}\)</span> are independent of <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> </span></span>, which is expected because the conditional mean and covariance should be determined by the distribution itself and the conditions,
 but should not be related to the “unknown” RVs.</p>
 </li></ul>
 </div>
