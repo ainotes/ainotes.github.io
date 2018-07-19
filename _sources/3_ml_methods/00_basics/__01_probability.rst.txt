@@ -160,7 +160,7 @@ Probability Theory Overview
 -----------------
 
 |para| Modern probability theory is built upon measure theory for rigorous
-insight of the nature of probabilities, where even an introductory
+insight into the nature of probabilities, where even an introductory
 course needs deep mathematical background and hundreds of pages, way
 beyond the scope of this text. Here we overview basic concepts and
 results that could help better understand machine learning models that
