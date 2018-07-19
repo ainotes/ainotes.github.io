@@ -205,7 +205,7 @@ which we hope to be good approximation of
 :math:`\mathbf{y}_{1},\ldots,\mathbf{y}_{N}`; 3)
 :math:`f\left( \mathbf{h},\mathbf{x};𝛉 \right)` and
 :math:`g\left( \mathbf{h};𝛌 \right)` are two function families
-and we can see :math:`\colorbox{result}{$g\left( \mathbf{h}_{t};𝛌_{t} \right)$ is only dependent on the past and the present data $\mathbf{x}_{1},\ldots,\mathbf{x}_{t}$}`since :math:`\mathbf{h}_{t}` is only
+and we can see :math:`\colorbox{result}{$g\left( \mathbf{h}_{t};𝛌_{t} \right)$ is only dependent on the past and the present data $\mathbf{x}_{1},\ldots,\mathbf{x}_{t}$}` since :math:`\mathbf{h}_{t}` is only
 dependent on them, so |result| function
 :math:`g \left( \mathbf{h};𝛌_{t} \right)`
 is our approximation of the underlying true function :math:`𝒻_{t}`  |end-span|;
