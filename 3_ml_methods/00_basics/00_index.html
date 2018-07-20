@@ -229,21 +229,23 @@ completely determined. <span class="emp">For example</span>, if we let
 <span class="math notranslate nohighlight">\(\Omega = \left\{ 0,1 \right\}\)</span>, then the experiment behind this
 <span class="math notranslate nohighlight">\(\Omega\)</span> is mathematically equivalent to the coin-flip experiment.</p>
 <p><span style="padding-left:20px"></span> In addition, we define a set <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> that contains subsets of
-<span class="math notranslate nohighlight">\(\Omega\)</span> and is named  <span><span class="exdef"> <span class="target" id="index-2"></span>𝜎-algebra</span></span>. It must satisfy three axioms: <span><span class="fact-highlight"> 1)
+<span class="math notranslate nohighlight">\(\Omega\)</span> and is named  <span><span class="exdef"> <span class="target" id="index-2"></span>𝜎-algebra</span></span>. It must satisfy three axioms: 1)
 <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> is non-empty; 2) for any <span class="math notranslate nohighlight">\(A\in \mathcal{ F}\)</span> then
 <span class="math notranslate nohighlight">\(\Omega\backslash A\in \mathcal{ F}\)</span>; 3) for countable many
 <span class="math notranslate nohighlight">\(A_{\mathrm{1}},A_{2},\text{...},A_{n}\mathcal{,\ldots \in F}\)</span>, then
-<span class="math notranslate nohighlight">\(\bigcup A_{k}\in \mathcal{ F}\)</span> </span></span>. The axioms are actually very intuitive
-if we view 𝜎-algebra as being “modeling”  <span><span class="exdef"> <span class="target" id="index-3"></span>partitions</span></span> of <span class="math notranslate nohighlight">\(\Omega\)</span> and
-“unions” of these partitions. <span class="emp">For example</span>, if we have a finite partition
-<span class="math notranslate nohighlight">\(\Omega_{1},\ldots,\Omega_{n}\)</span> of <span class="math notranslate nohighlight">\(\Omega\)</span> s.t.
-<span class="math notranslate nohighlight">\(\Omega_{i}\bigcap\Omega_{j} = \varnothing,\forall i \neq j\)</span> and
-<span class="math notranslate nohighlight">\(\bigcup_{i = 1}^{n}\Omega_{i} = \Omega\)</span>, then the set containing all
-possible unions of any subset of <span class="math notranslate nohighlight">\(\Omega_{1},\ldots,\Omega_{n}\)</span>, plus
-the empty set, is a 𝜎-algebra. For another example, the  <span><span class="exdef"> <span class="target" id="index-4"></span>power set</span></span> of
-<span class="math notranslate nohighlight">\(\Omega\)</span> is a 𝜎-algebra. Each set in <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> is referred to as an  <span><span class="exdef"> <span class="target" id="index-5"></span>event</span></span>. An event is also called a  <span><span class="exdef"> <span class="target" id="index-6"></span>measurable set</span></span> in mathematical
-text. The pair <span class="math notranslate nohighlight">\(\left( \Omega,\mathcal{F} \right)\)</span> a  <span><span class="exdef"> <span class="target" id="index-7"></span>measurable space</span></span>.</p>
-<p><span style="padding-left:20px"></span> A  <span><span class="exdef"> <span class="target" id="index-8"></span>measure</span></span> is mathematical concept that rigorously models essential
+<span class="math notranslate nohighlight">\(\bigcup A_{k}\in \mathcal{ F}\)</span>. It is easy to check if <span class="math notranslate nohighlight">\(\Omega\)</span> is
+finite or countable, then 𝜎-algebra is exactly the <a href="#id1"><span class="problematic" id="id2">*</span></a><span class="exdef">power set</span>
+of <span class="math notranslate nohighlight">\(\Omega\)</span>. 𝜎-algebra is the generalization of the concept of
+power set of a finite set to an  <span><span class="exdef"> <span class="target" id="index-3"></span>uncountable set</span></span>. Not every set of in
+the power set of an uncountable set is mathematically measurable; as a
+result, length, area or volume, or generally a <a class="reference internal" href="#measure">measure</a> (see
+below) cannot be properly defined for such set (see  <span><span class="exdef"> <span class="target" id="index-4"></span>Vitali set</span></span> if
+interested). 𝜎-algebra excludes these unmeasurable sets from the
+power set. Each set in <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> is called a  <span><span class="exdef"> <span class="target" id="index-5"></span>measurable set</span></span> in
+general mathematical context, and is referred to as an  <span><span class="exdef"> <span class="target" id="index-6"></span>event</span></span> in a
+probabilistic context. The tuple <span class="math notranslate nohighlight">\(\left( \Omega,\mathcal{F} \right)\)</span> is
+called a  <span><span class="exdef"> <span class="target" id="index-7"></span>measurable space</span></span>.</p>
+<p id="measure"><span style="padding-left:20px"></span> A  <span><span class="exdef"> <span class="target" id="index-8"></span>measure</span></span> is mathematical concept that rigorously models essential
 real-life concepts like length, area, volume, etc. The most widely used
 measure is called  <span><span class="exdef"> <span class="target" id="index-9"></span>Lebesgue measure</span></span>, which is consistent with our
 common sense. Under this measure, the length of a line, the area of a
@@ -344,7 +346,7 @@ their definitions are <span class="emp">simply</span> stochastic processes
 concrete process definition),
 <span class="math notranslate nohighlight">\(\left( X\left( t_{1} \right),\ldots,X\left( t_{N} \right) \right)\)</span> in
 some way obeys corresponding distributions (Gaussian distribution,
-Poisson distribution, Dirichlet distribution etc.). :emp:<a href="#id1"><span class="problematic" id="id2">``</span></a>For
+Poisson distribution, Dirichlet distribution etc.). :emp:<a href="#id3"><span class="problematic" id="id4">``</span></a>For
 example`, we may define <span class="math notranslate nohighlight">\(X\left( t \right)\)</span> obeys a
 Gaussian process <span class="math notranslate nohighlight">\(\operatorname{GP}\left( μ,\Sigma \right)\)</span> if
 <span class="math notranslate nohighlight">\(\forall N \geq 1,t_{1},\ldots,t_{N} \in T\)</span>,
@@ -741,7 +743,7 @@ Gaussian <span class="tooltip"> it must be positive definite <span class="toolti
 and <span class="math notranslate nohighlight">\(𝒹_{M}\left( \mathbf{x};\mathbf{μ,\Sigma} \right) = 0\)</span>
 iff <span class="math notranslate nohighlight">\(\mathbf{x} = \mathbf{μ}\)</span>. The inverse of covariance matrix
 <span class="math notranslate nohighlight">\(\mathbf{\Sigma}^{- 1}\)</span> is also named the  <span><span class="def"> <span class="target" id="index-67"></span>precision matrix</span></span>, denoted
-by :math:<a href="#id3"><span class="problematic" id="id4">`</span></a>mathbf{Ⲗ}:=mathbf{Sigma}^{- 1}`, and the density can be written in terms of precision
+by :math:<a href="#id5"><span class="problematic" id="id6">`</span></a>mathbf{Ⲗ}:=mathbf{Sigma}^{- 1}`, and the density can be written in terms of precision
 matrix as</p>
 <div class="math notranslate nohighlight">
 \[p\left( \mathbf{x} \right) = \frac{\left| \mathbf{Ⲗ} \right|^{\frac{1}{2}}}{\left( 2\pi \right)^{\frac{m}{2}}}\exp\left\{ - \frac{1}{2}\left( \mathbf{x} - \mathbf{μ} \right)^{\rm{T}}\mathbf{Ⲗ}\left( \mathbf{x} - \mathbf{μ} \right) \right\}\]</div>

@@ -180,20 +180,25 @@ completely determined. :emp:`For example`, if we let
 :math:`\Omega` is mathematically equivalent to the coin-flip experiment.
 
 |para| In addition, we define a set :math:`\mathcal{F}` that contains subsets of
-:math:`\Omega` and is named  |exdef| :index:`𝜎-algebra` |end-span|. It must satisfy three axioms: |fact| 1)
+:math:`\Omega` and is named  |exdef| :index:`𝜎-algebra` |end-span|. It must satisfy three axioms: 1)
 :math:`\mathcal{F}` is non-empty; 2) for any :math:`A\in \mathcal{ F}` then
 :math:`\Omega\backslash A\in \mathcal{ F}`; 3) for countable many
 :math:`A_{\mathrm{1}},A_{2},\text{...},A_{n}\mathcal{,\ldots \in F}`, then
-:math:`\bigcup A_{k}\in \mathcal{ F}`  |end-span|. The axioms are actually very intuitive
-if we view 𝜎-algebra as being "modeling"  |exdef| :index:`partitions` |end-span| of :math:`\Omega` and
-"unions" of these partitions. :emp:`For example`, if we have a finite partition
-:math:`\Omega_{1},\ldots,\Omega_{n}` of :math:`\Omega` s.t.
-:math:`\Omega_{i}\bigcap\Omega_{j} = \varnothing,\forall i \neq j` and
-:math:`\bigcup_{i = 1}^{n}\Omega_{i} = \Omega`, then the set containing all
-possible unions of any subset of :math:`\Omega_{1},\ldots,\Omega_{n}`, plus
-the empty set, is a 𝜎-algebra. For another example, the  |exdef| :index:`power set` |end-span| of
-:math:`\Omega` is a 𝜎-algebra. Each set in :math:`\mathcal{F}` is referred to as an  |exdef| :index:`event` |end-span|. An event is also called a  |exdef| :index:`measurable set` |end-span| in mathematical
-text. The pair :math:`\left( \Omega,\mathcal{F} \right)` a  |exdef| :index:`measurable space` |end-span|.
+:math:`\bigcup A_{k}\in \mathcal{ F}`. It is easy to check if :math:`\Omega` is
+finite or countable, then 𝜎-algebra is exactly the *:exdef:`power set`
+of :math:`\Omega`. 𝜎-algebra is the generalization of the concept of
+power set of a finite set to an  |exdef| :index:`uncountable set` |end-span|. Not every set of in
+the power set of an uncountable set is mathematically measurable; as a
+result, length, area or volume, or generally a measure_ (see
+below) cannot be properly defined for such set (see  |exdef| :index:`Vitali set` |end-span| if
+interested). 𝜎-algebra excludes these unmeasurable sets from the
+power set. Each set in :math:`\mathcal{F}` is called a  |exdef| :index:`measurable set` |end-span| in
+general mathematical context, and is referred to as an  |exdef| :index:`event` |end-span| in a
+probabilistic context. The tuple :math:`\left( \Omega,\mathcal{F} \right)` is
+called a  |exdef| :index:`measurable space` |end-span|.
+
+.. _measure:
+
 
 |para| A  |exdef| :index:`measure` |end-span| is mathematical concept that rigorously models essential
 real-life concepts like length, area, volume, etc. The most widely used
