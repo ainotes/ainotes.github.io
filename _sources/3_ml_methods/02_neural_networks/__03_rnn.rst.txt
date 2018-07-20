@@ -213,12 +213,12 @@ is our approximation of the underlying true function :math:`𝒻_{t}`  |end-span
 parameters to be inferred through optimization together with estimation
 of :math:`\mathbf{h}_{t},{\widehat{\mathbf{y}}}_{t},t = 1,2,\ldots`
 The model scheme in :eq:`eq_rnn_general` specifies the general architecture of RNN, and hence we also refer to it specifically as the general recurrent network
-The plate diagram of model represented by :eq:`eq_rnn_general` is shown in :ref:`Figure 3-1 <figure_basic_rnn>`.
+The plate diagram of model represented by :eq:`eq_rnn_general` is shown in .
 
 
 .. raw:: html
 
-   <div class="hidden_cell" style="display: none">$$cell_001$$
+   <div class="hidden_cell_cell" style="display: none">$$cell_001$$
 
 .. image:: ./basic_rnn_unfolded.png
   :scale: 100%
@@ -231,7 +231,7 @@ The plate diagram of model represented by :eq:`eq_rnn_general` is shown in :ref:
 
 .. raw:: html
 
-   <div class="hidden_cell" style="display: none">$$cell_002$$
+   <div class="hidden_cell_cell" style="display: none">$$cell_002$$
 
 :math:`\Leftrightarrow`
 
@@ -243,7 +243,7 @@ The plate diagram of model represented by :eq:`eq_rnn_general` is shown in :ref:
 
 .. raw:: html
 
-   <div class="hidden_cell" style="display: none">$$cell_003$$
+   <div class="hidden_cell_cell" style="display: none">$$cell_003$$
 
 .. image:: ./basic_rnn_folded.png
   :scale: 150%
@@ -394,12 +394,12 @@ memory |end-span|. This philosophy intuitively makes sense for many applications
 e.g. today's stock price is likely to be more dependent on this
 months' historical prices, rather than last month's price history. A
 concrete example of such "history forgetting" is in :eq:`eq_lstm_sg_example_model` and :eq:`eq_lstm_sg_example_model_forgetting_illustration`.
-The plate diagram of this general LSTM is given in Figure :ref:`Figure 3-2 <figure_lstm_single_gate>`.
+The plate diagram of this general LSTM is given in Figure .
 
 
 .. raw:: html
 
-   <div class="hidden_cell" style="display: none">$$cell_011$$
+   <div class="hidden_cell_cell" style="display: none">$$cell_011$$
 
 .. image:: ./lstm_single_gate_unfolded.png
   :scale: 100%
@@ -412,7 +412,7 @@ The plate diagram of this general LSTM is given in Figure :ref:`Figure 3-2 <figu
 
 .. raw:: html
 
-   <div class="hidden_cell" style="display: none">$$cell_012$$
+   <div class="hidden_cell_cell" style="display: none">$$cell_012$$
 
 :math:`\Leftrightarrow`
 
@@ -424,7 +424,7 @@ The plate diagram of this general LSTM is given in Figure :ref:`Figure 3-2 <figu
 
 .. raw:: html
 
-   <div class="hidden_cell" style="display: none">$$cell_013$$
+   <div class="hidden_cell_cell" style="display: none">$$cell_013$$
 
 .. image:: ./lstm_single_gate_folded.png
   :scale: 150%
@@ -516,7 +516,7 @@ gates to achieve more flexibility, as in :eq:`eq_lstm_mg_general`, where
 
 .. raw:: html
 
-   <div class="hidden_cell" style="display: none">$$cell_021$$
+   <div class="hidden_cell_cell" style="display: none">$$cell_021$$
 
 .. image:: ./lstm_multiple_gate_folded.png
   :scale: 100%
@@ -529,7 +529,7 @@ gates to achieve more flexibility, as in :eq:`eq_lstm_mg_general`, where
 
 .. raw:: html
 
-   <div class="hidden_cell" style="display: none">$$cell_022$$
+   <div class="hidden_cell_cell" style="display: none">$$cell_022$$
 
 .. math::
  \begin{aligned}
@@ -553,7 +553,7 @@ gates to achieve more flexibility, as in :eq:`eq_lstm_mg_general`, where
 
 .. raw:: html
 
-   <div class="hidden_cell" style="display: none">$$cell_023$$
+   <div class="hidden_cell_cell" style="display: none">$$cell_023$$
 
 
 .. _figure_lstm_multiple_gates:

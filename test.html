@@ -169,35 +169,19 @@
       });
 </script><div class="section" id="some-title-for-first-chapter">
 <h1>Some Title For First Chapter<a class="headerlink" href="#some-title-for-first-chapter" title="Permalink to this headline">¶</a></h1>
-<p><ol style="left-margin:20px"></p>
-<li value="1"><p>The dimension of hidden states <span class="math notranslate nohighlight">\(\mathbf{h}_{t}\)</span> is free to choose, but the dimension of outputs <span class="math notranslate nohighlight">\({\widehat{\mathbf{y}}}_{t}\)</span> is designed to be
-equal to <span class="math notranslate nohighlight">\(\left| L \right|\)</span>. Moreover, we can design
-<span class="math notranslate nohighlight">\({\widehat{\mathbf{y}}}_{t}\)</span> as a discrete probability distribution. All
-these designs are for the loss function – the well-known
-negative-log-likelihood now can be chosen as the loss function –
-taking negative logarithm on the one element of
-<span class="math notranslate nohighlight">\({\widehat{\mathbf{y}}}_{t}\)</span> indexed by true label <span class="math notranslate nohighlight">\(y_{t}\)</span>, i.e.</p>
-<div class="math notranslate nohighlight">
-\[\mathcal{l = -}\sum_{t = 1}^{N}{\log\left( {\widehat{\mathbf{y}}}_{t}\left( y_{t} \right) \right)}\]</div>
-<p></li></p>
-<li value="2"><p>Now in order for <span class="math notranslate nohighlight">\({\widehat{\mathbf{y}}}_{t} = g\left( \mathbf{h}_{t};𝛌_{t} \right)\)</span>
-to be a probability distribution vector of dimension equal to the size
-of label set, we can let</p>
-<div class="math notranslate nohighlight">
-\[g\left( \mathbf{h}_{t};𝛌_{t} \right) := \operatorname{softmax}\left( \mathbf{c + W}\left( \text{sigmoid}\left( \mathbf{b}^{\left( g \right)} + \mathbf{U}^{\left( g \right)}\mathbf{h}_{t} + \mathbf{V}^{\left( g \right)}\mathbf{x}_{t} \right) \circ \tanh\left( \mathbf{h}_{t} \right) \right) \right)\]</div>
-<p>where <span class="math notranslate nohighlight">\(\mathbf{c \in}\mathbf{R}^{\left| L \right|}\)</span> and
-<span class="math notranslate nohighlight">\(\mathbf{W} \in \mathbb{R}^{\left| L \right| \times \dim\mathbf{h}_{t}}\)</span>,
-and
-<span class="math notranslate nohighlight">\(\log\left( \cdot \right),\operatorname{softmax}\left( \cdot \right)\)</span>
-are applied element-wise if the input is a vector.</p>
-<p></li> </ol></p>
-<table class="docutils" style="background:none; border:none;"><tbody><tr class="row-odd"><td  style="background:none; border:none;">text1</td><td  style="background:none; border:none;">text2</td></tr><tr><td  style="background:none; border:none;">text3</td><td  style="background:none; border:none;">$$cell_01$$</td></tr></tbody></table><div class="hidden_cell" style="display: none">$$cell_01$$<div class="math notranslate nohighlight">
+<table class="docutils" style="background:none; border:none;"><tbody><tr class="row-odd"><td  style="background:none; border:none;">text1</td><td  style="background:none; border:none;">text2</td></tr><tr><td  style="background:none; border:none;">text3</td><td  style="background:none; border:none;">$$cell_01$$</td></tr></tbody></table><div class="hidden_cell_cell" style="display: none">$$cell_01$$<div class="math notranslate nohighlight">
 \[\begin{split}\begin{align}
 \left|(T\textbf{x})_i(t)-(T\textbf{y})_i(t)\right| &amp;= \left|\int_a^bG(t,s)\left( f_i(x_1(s),...,x_n(s))-f_i(y_1(s),...,y_n(s)) \right)\operatorname{d}s\right|\\
 &amp; \le \int_a^b\left|G(t,s)\right|K_i \max_{i} \left|  x_i(s)-y_i(s) \right|\operatorname{d}s \\
 &amp; \le K\| \textbf{x}-\textbf{y}\| \int_a^b G(t,s)\operatorname{d}s
 \end{align}\end{split}\]</div>
-$$end_cell_01$$</div><p>For example, if <span class="math notranslate nohighlight">\(\Omega = \left\{ 0,1 \right\}\)</span>, then
+$$end_cell_01$$</div>  <div class="hidden_cell_note" style="display: none">$$cell_test title$$
+
+useless$$end_cell_test title$$</div><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">test note</p>
+</div>
+<p>For example, if <span class="math notranslate nohighlight">\(\Omega = \left\{ 0,1 \right\}\)</span>, then
 <span class="math notranslate nohighlight">\(\left\{ \left\{ 0 \right\},\left\{ 1 \right\},\left\{ 0,1 \right\},\varnothing \right\}\)</span> is a 𝜎-algebra of <span class="math notranslate nohighlight">\(\Omega\)</span> and we can define
 <span class="math notranslate nohighlight">\(\mathbb{P}\left( \left\{ 0 \right\} \right) = 0.3,\mathbb{P}\left( \left\{ 1 \right\} \right) = 0.7,\mathbb{P}\left( \left\{ 0,1 \right\} \right) = 1,\mathbb{P}\left( \varnothing \right) = 0\)</span>.</p>
 <p>Hello world! Hellow World! This is a final test.</p>
@@ -242,7 +226,9 @@ italic </span></span>, and an example of inline <strong>italic</strong>.</p>
 <p>First, <span class="conn1">something</span> has connection with <span class="conn1">another thing</span>.</p>
 <p>Again, <span class="conn2">something</span> has connection with <span class="conn2">another thing</span>.</p>
 <p>Again, <span><span style="font-weight: bold;"> <span class="conn3">something</span> </span></span> has connection with <span class="conn3">another thing</span>.</p>
-<div class="admonition note">
+  <div class="hidden_cell_note" style="display: none">$$cell_$$
+
+useless$$end_cell_$$</div><div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p>We can use latex \colorbox to partially highlight a formula, e.g. <span class="math notranslate nohighlight">\(\frac{\colorbox{thm}{$\sin(x)$} \times \cos(x)}{\colorbox{rlt}{$x^2+y^2=1$}}\)</span>. The following is math block.</p>
 <p>We can use latex \color to color formula.</p>
@@ -292,11 +278,9 @@ italic </span></span>, and an example of inline <strong>italic</strong>.</p>
 <li>This is a link to <a class="reference internal" href="#theorem-aa"><span class="std std-ref">Theorem 1-1</span></a></li>
 <li>This is a link to <a class="reference internal" href="#equation-round">Eq.</a>.</li>
 </ul>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">You may also specify inline note</p>
-</div>
-<div class="section" id="level-4-title">
+  <div class="hidden_cell_note" style="display: none">$$cell_You may also specify inline note$$
+
+useless$$end_cell_You may also specify inline note$$</div><div class="section" id="level-4-title">
 <h4>Level 4 Title<a class="headerlink" href="#level-4-title" title="Permalink to this headline">¶</a></h4>
 <p>An example to display some code.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">recommonmark.parser</span> <span class="kn">import</span> <span class="n">CommonMarkParser</span>

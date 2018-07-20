@@ -160,3 +160,5 @@ Basic Neural Networks
 =============
 
 .. include:: __03_rnn.rst
+
+.. include:: __04_ae.rst
