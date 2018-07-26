@@ -18,7 +18,7 @@
 
 .. |list-div| raw:: html
 
-   <ul style="left-margin:20px">
+   <ul style="margin-left:20px">
 
 .. |end-list-div| raw:: html
 
@@ -26,7 +26,7 @@
 
 .. |enum-div| raw:: html
 
-   <ol style="left-margin:20px">
+   <ol style="margin-left:20px">
 
 .. |end-enum-div| raw:: html
 
@@ -34,11 +34,11 @@
 
 .. |item-div| raw:: html
 
-   <li>
+   <li style="margin-top:10px">
 
 .. |item| raw:: html
 
-   <li>
+   <li style="margin-top:10px">
 
 .. |end-item-div| raw:: html
 
@@ -127,6 +127,10 @@
 .. |span-right| raw:: html
 
    <span style="text-align:right;display:block">
+
+.. |span-justify| raw:: html
+
+   <span style="text-align:justify">
 
 .. |end-span| raw:: html
 
@@ -256,12 +260,12 @@ The plate diagram of model represented by :eq:`eq_rnn_general` is shown in .
 
 .. raw:: html
 
-   <table class="colwidths - given docutils" style="background:none; border:none;"><colgroup><col width = "80%" /><col width = "2%" /><col width = "17%" /></colgroup><tbody><tr class="row-odd" style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;">$$cell_001$$</td><td  style="background:none; border:none;">$$cell_002$$</td><td  style="background:none; border:none;">$$cell_003$$</td></tr><tr style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;">(a)</td><td  style="background:none; border:none;"></td><td  style="background:none; border:none;">(b)</td></tr></tbody></table>
+   <table class="colwidths - given docutils" style="background:none; border:none;" ><colgroup><col width = "80%" /><col width = "2%" /><col width = "17%" /></colgroup><tbody><tr class="row-odd" style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;">$$cell_001$$</td><td  style="background:none; border:none;">$$cell_002$$</td><td  style="background:none; border:none;">$$cell_003$$</td></tr><tr style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;">(a)</td><td  style="background:none; border:none;"></td><td  style="background:none; border:none;">(b)</td></tr></tbody></table>
 
 
 .. _figure_basic_rnn:
 
-|span-center| |ibold| Figure 3-1 |end-span| The plate diagram of the recurrent network.
+|span-justify| |ibold| Figure 3-1 |end-span| The plate diagram of the recurrent network.
 (a) the unfolded diagram, with back propagation direction illustrated;
 (b) the folded diagram. |end-span|
 
@@ -437,12 +441,12 @@ The plate diagram of this general LSTM is given in Figure .
 
 .. raw:: html
 
-   <table class="colwidths - given docutils" style="background:none; border:none;"><colgroup><col width = "80%" /><col width = "2%" /><col width = "17%" /></colgroup><tbody><tr class="row-odd" style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;">$$cell_011$$</td><td  style="background:none; border:none;">$$cell_012$$</td><td  style="background:none; border:none;">$$cell_013$$</td></tr><tr style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;">(a)</td><td  style="background:none; border:none;"></td><td  style="background:none; border:none;">(b)</td></tr></tbody></table>
+   <table class="colwidths - given docutils" style="background:none; border:none;" ><colgroup><col width = "80%" /><col width = "2%" /><col width = "17%" /></colgroup><tbody><tr class="row-odd" style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;">$$cell_011$$</td><td  style="background:none; border:none;">$$cell_012$$</td><td  style="background:none; border:none;">$$cell_013$$</td></tr><tr style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;">(a)</td><td  style="background:none; border:none;"></td><td  style="background:none; border:none;">(b)</td></tr></tbody></table>
 
 
 .. _figure_lstm_single_gate:
 
-|span-center| |ibold| Figure 3-2 |end-span| The unfolded and folded plate diagram of the LSTM with single forget gate.
+|span-justify| |ibold| Figure 3-2 |end-span| The unfolded and folded plate diagram of the LSTM with single forget gate.
 LSTM can be viewed as a special case of general RNN such that it defines a forgetting rate function
 to dampen the effects of far-away past on the current state; or conversely the general RNN can be viewed
 as a special case of LSTM by setting forgetting rate as the constant 1. |end-span|
@@ -558,7 +562,7 @@ gates to achieve more flexibility, as in :eq:`eq_lstm_mg_general`, where
 
 .. _figure_lstm_multiple_gates:
 
-|span-center| |ibold| Figure -1 |end-span| The folded diagram of a 2-forget-gate LSTM. |end-span|
+|span-justify| |ibold| Figure 3-3 |end-span| The folded diagram of a 2-forget-gate LSTM. |end-span|
 
 
 .. raw:: html
@@ -568,7 +572,7 @@ gates to achieve more flexibility, as in :eq:`eq_lstm_mg_general`, where
 
 .. raw:: html
 
-   <table class="colwidths - given docutils" style="background:none; border:none;"><colgroup><col width = "25%" /><col width = "75%" /></colgroup><tbody><tr class="row-odd" style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;">$$cell_021$$</td><td  rowspan="2" style="background:none; border:none;">$$cell_022$$</td></tr><tr style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;">$$cell_023$$</td><td  style="background:none; border:none;"></td></tr></tbody></table>
+   <table class="colwidths - given docutils" style="background:none; border:none;" ><colgroup><col width = "25%" /><col width = "75%" /></colgroup><tbody><tr class="row-odd" style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;">$$cell_021$$</td><td  rowspan="2" style="background:none; border:none;">$$cell_022$$</td></tr><tr style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;">$$cell_023$$</td><td  style="background:none; border:none;"></td></tr></tbody></table>
 
 To see why :eq:`eq_lstm_mg_general` makes sense, we can have a network with design similar to :eq:`eq_lstm_sg_example_model` as
 
@@ -629,7 +633,7 @@ as the following to suit our situation,
 
 .. raw:: html
 
-   <li value="1">
+   <li value="1" style="margin-top:10px">
 The dimension of hidden states :math:`\mathbf{h}_{t}` is free to choose, but the dimension
 of outputs :math:`{\widehat{\mathbf{y}}}_{t}` is designed to be equal to :math:`\left| L \right|`.
 Moreover, we can design :math:`{\widehat{\mathbf{y}}}_{t}` as a discrete probability distribution.
@@ -648,7 +652,7 @@ taking negative logarithm on the one element of
 
 .. raw:: html
 
-   <li value="2">
+   <li value="2" style="margin-top:10px">
 Now in order for :math:`{\widehat{\mathbf{y}}}_{t} = g\left( \mathbf{h}_{t};𝛌_{t} \right)`
 to be a probability distribution vector of dimension equal to the size
 of label set, we can let

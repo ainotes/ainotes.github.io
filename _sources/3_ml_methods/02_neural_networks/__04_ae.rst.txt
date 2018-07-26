@@ -18,7 +18,7 @@
 
 .. |list-div| raw:: html
 
-   <ul style="left-margin:20px">
+   <ul style="margin-left:20px">
 
 .. |end-list-div| raw:: html
 
@@ -26,7 +26,7 @@
 
 .. |enum-div| raw:: html
 
-   <ol style="left-margin:20px">
+   <ol style="margin-left:20px">
 
 .. |end-enum-div| raw:: html
 
@@ -34,11 +34,11 @@
 
 .. |item-div| raw:: html
 
-   <li>
+   <li style="margin-top:10px">
 
 .. |item| raw:: html
 
-   <li>
+   <li style="margin-top:10px">
 
 .. |end-item-div| raw:: html
 
@@ -128,6 +128,10 @@
 
    <span style="text-align:right;display:block">
 
+.. |span-justify| raw:: html
+
+   <span style="text-align:justify">
+
 .. |end-span| raw:: html
 
    </span></span>
@@ -198,7 +202,7 @@ Autoencoder Networks
 
 .. _figure_ae_basic:
 
-|span-center| |ibold| Figure -1 |end-span| The diagram of basic autoencoder. |end-span|
+|span-justify| |ibold| Figure 3-4 |end-span| The diagram of basic autoencoder. |end-span|
 
 
 .. raw:: html
@@ -208,7 +212,7 @@ Autoencoder Networks
 
 .. raw:: html
 
-   <table class="colwidths - given docutils" style="background:none; border:none;"><colgroup><col width = "31%" /><col width = "69%" /></colgroup><tbody><tr class="row-odd" style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;">$$cell_031$$</td><td  rowspan="2" style="background:none; border:none;">$$cell_032$$</td></tr><tr style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;">$$cell_033$$</td><td  style="background:none; border:none;"></td></tr></tbody></table>
+   <table class="colwidths - given docutils" style="background:none; border:none;" ><colgroup><col width = "31%" /><col width = "69%" /></colgroup><tbody><tr class="row-odd" style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;">$$cell_031$$</td><td  rowspan="2" style="background:none; border:none;">$$cell_032$$</td></tr><tr style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;">$$cell_033$$</td><td  style="background:none; border:none;"></td></tr></tbody></table>
 
 |para| Since each function is associated with its own parameters, we may omit
 the parameters and denote the functions as just :math:`f,g` for simplicity.
@@ -236,7 +240,7 @@ then we call such autoencoder  |def| :index:`overcomplete` |end-span| and those
 :math:`\mathbf{h}_{k}` s as  |def| :index:`overcomplete representations` |end-span|, which maps
 data points to higher dimensional space and can be useful for classification.
 
-|para| From :eq:`eq_ae_basic` and :ref:`Figure -1 <figure_ae_basic>`, it is clear |result| an autoencoder of above basic
+|para| From :eq:`eq_ae_basic` and :ref:`Figure 3-4 <figure_ae_basic>`, it is clear |result| an autoencoder of above basic
 structure is a feed-forward network |end-span|, therefore any discussion of FFN
 applies to autoencoder, for example, the back propagation process, and
 that adding additional layers such as
@@ -385,7 +389,7 @@ training to avoid bias. :emp:`Note` the loss function
 
 .. _figure_dae_basic:
 
-|span-center| |ibold| Figure -1 |end-span| The diagram of basic denoising autoencoder. |end-span|
+|span-justify| |ibold| Figure 3-5 |end-span| The diagram of basic denoising autoencoder. |end-span|
 
 
 .. raw:: html
@@ -395,7 +399,7 @@ training to avoid bias. :emp:`Note` the loss function
 
 .. raw:: html
 
-   <table class="colwidths - given docutils" style="background:none; border:none;"><colgroup><col width = "40%" /><col width = "60%" /></colgroup><tbody><tr class="row-odd" style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;">$$cell_041$$</td><td  rowspan="2" style="background:none; border:none;">$$cell_042$$</td></tr><tr style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;">$$cell_043$$</td><td  style="background:none; border:none;"></td></tr></tbody></table>
+   <table class="colwidths - given docutils" style="background:none; border:none;" ><colgroup><col width = "40%" /><col width = "60%" /></colgroup><tbody><tr class="row-odd" style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;">$$cell_041$$</td><td  rowspan="2" style="background:none; border:none;">$$cell_042$$</td></tr><tr style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;">$$cell_043$$</td><td  style="background:none; border:none;"></td></tr></tbody></table>
 
 |para| A third popular variant is called the  |def| :index:`contractive autoencoder` |end-span|. It is
 basically not a new model, but simply adds a norm

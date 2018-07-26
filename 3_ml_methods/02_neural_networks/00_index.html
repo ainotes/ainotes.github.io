@@ -34,7 +34,7 @@
     <link rel="prev" title="1. Preliminaries" href="../00_basics/00_index.html" /> 
 
   
-  <script src="_static/js/modernizr.min.js"></script>
+  <script src="../../_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -250,10 +250,10 @@ parameters to be inferred through optimization together with estimation
 of <span class="math notranslate nohighlight">\(\mathbf{h}_{t},{\widehat{\mathbf{y}}}_{t},t = 1,2,\ldots\)</span>
 The model scheme in <a class="reference internal" href="#equation-eq-rnn-general">Eq.2.1</a> specifies the general architecture of RNN, and hence we also refer to it specifically as the general recurrent network
 The plate diagram of model represented by <a class="reference internal" href="#equation-eq-rnn-general">Eq.2.1</a> is shown in .</p>
-<table class="colwidths - given docutils" style="background:none; border:none;"><colgroup><col width = "80%" /><col width = "2%" /><col width = "17%" /></colgroup><tbody><tr class="row-odd" style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;"><a class="reference internal image-reference" href="3_ml_methods\02_neural_networks\./basic_rnn_unfolded.png"><img alt="3_ml_methods\02_neural_networks\./basic_rnn_unfolded.png" src="basic_rnn_unfolded.png" /></a>
+<table class="colwidths - given docutils" style="background:none; border:none;" ><colgroup><col width = "80%" /><col width = "2%" /><col width = "17%" /></colgroup><tbody><tr class="row-odd" style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;"><a class="reference internal image-reference" href="basic_rnn_unfolded.png"><img alt="basic_rnn_unfolded.png" src="basic_rnn_unfolded.png" /></a>
 </td><td  style="background:none; border:none;"><p><span class="math notranslate nohighlight">\(\Leftrightarrow\)</span></p>
-</td><td  style="background:none; border:none;"><a class="reference internal image-reference" href="3_ml_methods\02_neural_networks\./basic_rnn_folded.png"><img alt="3_ml_methods\02_neural_networks\./basic_rnn_folded.png" src="basic_rnn_folded.png" /></a>
-</td></tr><tr style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;">(a)</td><td  style="background:none; border:none;"></td><td  style="background:none; border:none;">(b)</td></tr></tbody></table><p id="figure-basic-rnn"><span style="text-align:center;display:block"> <span><span class="ibold"> Figure 3-1</span></span> The plate diagram of the recurrent network.
+</td><td  style="background:none; border:none;"><a class="reference internal image-reference" href="basic_rnn_folded.png"><img alt="basic_rnn_folded.png" src="basic_rnn_folded.png" /></a>
+</td></tr><tr style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;">(a)</td><td  style="background:none; border:none;"></td><td  style="background:none; border:none;">(b)</td></tr></tbody></table><p id="figure-basic-rnn"><span style="text-align:justify"> <span><span class="ibold"> Figure 3-1</span></span> The plate diagram of the recurrent network.
 (a) the unfolded diagram, with back propagation direction illustrated;
 (b) the folded diagram.</span></span></p>
 <p><span style="padding-left:20px"></span> For <a class="reference internal" href="#equation-eq-rnn-general">Eq.2.1</a>, <span class="emp">note</span> very often we may use  <span><span class="exdef"> <span class="target" id="index-11"></span>time-homogenous parameters</span></span>,
@@ -327,8 +327,8 @@ replaced by</p>
 \frac{\partialℓ}{\partial𝛉}
 &amp;= \sum_{t = 1}^{N}{{\color{conn2} \frac{\partialℓ}{\partial\mathbf{h}_{t}}}\frac{\partial f_{𝛉}\left( \mathbf{h}_{t - 1},\mathbf{x}_{t} \right)}{\partial𝛉}}
 \end{aligned}\end{split}\]</div>
-<ul style="left-margin:20px">
-<li>
+<ul style="margin-left:20px">
+<p><li style="margin-top:10px"></p>
 <div class="section" id="model-3-1-lstm-with-single-forget-gate">
 <span id="model-lstm-single-gate"></span><h3 style="display: inline; font-size:16px"><span class="ititle">Model 3-1.</span> <span class="bemp">LSTM with Single Forget Gate.</span><a class="headerlink" href="#model-3-1-lstm-with-single-forget-gate" title="Permalink to this headline">¶</a></h3>A well-known variant of RNN <a class="reference internal" href="#equation-eq-rnn-general">Eq.2.1</a> is the  <span><span class="def"> <span class="target" id="index-14"></span>long short-term memory</span></span>
 network (LSTM), whose <span class="emp">essential idea</span> is to introduce the
@@ -363,10 +363,10 @@ e.g. today’s stock price is likely to be more dependent on this
 months’ historical prices, rather than last month’s price history. A
 concrete example of such “history forgetting” is in <a class="reference internal" href="#equation-eq-lstm-sg-example-model">Eq.2.6</a> and <a class="reference internal" href="#equation-eq-lstm-sg-example-model-forgetting-illustration">Eq.2.8</a>.
 The plate diagram of this general LSTM is given in Figure .</p>
-<table class="colwidths - given docutils" style="background:none; border:none;"><colgroup><col width = "80%" /><col width = "2%" /><col width = "17%" /></colgroup><tbody><tr class="row-odd" style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;"><a class="reference internal image-reference" href="3_ml_methods\02_neural_networks\./lstm_single_gate_unfolded.png"><img alt="3_ml_methods\02_neural_networks\./lstm_single_gate_unfolded.png" src="lstm_single_gate_unfolded.png" /></a>
+<table class="colwidths - given docutils" style="background:none; border:none;" ><colgroup><col width = "80%" /><col width = "2%" /><col width = "17%" /></colgroup><tbody><tr class="row-odd" style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;"><a class="reference internal image-reference" href="lstm_single_gate_unfolded.png"><img alt="lstm_single_gate_unfolded.png" src="lstm_single_gate_unfolded.png" /></a>
 </td><td  style="background:none; border:none;"><p><span class="math notranslate nohighlight">\(\Leftrightarrow\)</span></p>
-</td><td  style="background:none; border:none;"><a class="reference internal image-reference" href="3_ml_methods\02_neural_networks\./lstm_single_gate_folded.png"><img alt="3_ml_methods\02_neural_networks\./lstm_single_gate_folded.png" src="lstm_single_gate_folded.png" /></a>
-</td></tr><tr style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;">(a)</td><td  style="background:none; border:none;"></td><td  style="background:none; border:none;">(b)</td></tr></tbody></table><p id="figure-lstm-single-gate"><span style="text-align:center;display:block"> <span><span class="ibold"> Figure 3-2</span></span> The unfolded and folded plate diagram of the LSTM with single forget gate.
+</td><td  style="background:none; border:none;"><a class="reference internal image-reference" href="lstm_single_gate_folded.png"><img alt="lstm_single_gate_folded.png" src="lstm_single_gate_folded.png" /></a>
+</td></tr><tr style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;">(a)</td><td  style="background:none; border:none;"></td><td  style="background:none; border:none;">(b)</td></tr></tbody></table><p id="figure-lstm-single-gate"><span style="text-align:justify"> <span><span class="ibold"> Figure 3-2</span></span> The unfolded and folded plate diagram of the LSTM with single forget gate.
 LSTM can be viewed as a special case of general RNN such that it defines a forgetting rate function
 to dampen the effects of far-away past on the current state; or conversely the general RNN can be viewed
 as a special case of LSTM by setting forgetting rate as the constant 1.</span></span></p>
@@ -408,13 +408,14 @@ based on above design, we have</p>
 <p>will be a vector of very small quantities when <span class="math notranslate nohighlight">\(T\)</span> is large, effectively
 limiting the effect of <span class="math notranslate nohighlight">\(\mathbf{h}_{t}\)</span> on <span class="math notranslate nohighlight">\(\mathbf{h}_{t + T}\)</span> and
 hence <span class="math notranslate nohighlight">\({\widehat{\mathbf{y}}}_{t + T}\)</span>.</p>
-</div></li><li>
-
+</li>
+<p><li style="margin-top:10px"></p>
+</div>
 <div class="section" id="model-3-2-lstm-with-multiple-forget-gate">
 <span id="model-lstm-multiple-gates"></span><h3 style="display: inline; font-size:16px"><span class="ititle">Model 3-2.</span> <span class="bemp">LSTM with Multiple Forget Gate.</span><a class="headerlink" href="#model-3-2-lstm-with-multiple-forget-gate" title="Permalink to this headline">¶</a></h3>A further canonical development of <a class="reference internal" href="#equation-eq-lstm-sg-general">Eq.2.5</a> is to introduce multiple forget
 gates to achieve more flexibility, as in <a class="reference internal" href="#equation-eq-lstm-mg-general">Eq.2.9</a>, where
 <span class="math notranslate nohighlight">\(σ^{\left( j \right)},j = 1,\ldots,K\)</span> are forget gate functions,</p>
-<table class="colwidths - given docutils" style="background:none; border:none;"><colgroup><col width = "25%" /><col width = "75%" /></colgroup><tbody><tr class="row-odd" style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;"><a class="reference internal image-reference" href="3_ml_methods\02_neural_networks\./lstm_multiple_gate_folded.png"><img alt="3_ml_methods\02_neural_networks\./lstm_multiple_gate_folded.png" src="lstm_multiple_gate_folded.png" /></a>
+<table class="colwidths - given docutils" style="background:none; border:none;" ><colgroup><col width = "25%" /><col width = "75%" /></colgroup><tbody><tr class="row-odd" style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;"><a class="reference internal image-reference" href="lstm_multiple_gate_folded.png"><img alt="lstm_multiple_gate_folded.png" src="lstm_multiple_gate_folded.png" /></a>
 </td><td  rowspan="2" style="background:none; border:none;"><div class="math notranslate nohighlight" id="equation-eq-lstm-mg-general">
 <span class="eqno">(2.9)<a class="headerlink" href="#equation-eq-lstm-mg-general" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{aligned}
 \mathbf{h}_{1}
@@ -427,7 +428,7 @@ gates to achieve more flexibility, as in <a class="reference internal" href="#eq
 \mathbf{h}_{N}
 &amp;= \sum_{j = 1}^{K}{σ^{\left( j \right)}\left( \mathbf{h}_{N - 1},\mathbf{x}_{N};𝛉_{N}^{\left( σ,j \right)} \right) \circ f^{\left( j \right)}\left( \mathbf{h}_{N - 1},\mathbf{x}_{N};𝛉_{N}^{\left( j \right)} \right)},{\widehat{\mathbf{y}}}_{N} = g\left( \mathbf{h}_{N};𝛌_{N} \right)
 \end{aligned}\end{split}\]</div>
-</td></tr><tr style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;"><p id="figure-lstm-multiple-gates"><span style="text-align:center;display:block"> <span><span class="ibold"> Figure -1</span></span> The folded diagram of a 2-forget-gate LSTM.</span></span>
+</td></tr><tr style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;"><p id="figure-lstm-multiple-gates"><span style="text-align:justify"> <span><span class="ibold"> Figure 3-3</span></span> The folded diagram of a 2-forget-gate LSTM.</span></span>
 </td><td  style="background:none; border:none;"></td></tr></tbody></table><p>To see why <a class="reference internal" href="#equation-eq-lstm-mg-general">Eq.2.9</a> makes sense, we can have a network with design similar to <a class="reference internal" href="#equation-eq-lstm-sg-example-model">Eq.2.6</a> as</p>
 <div class="math notranslate nohighlight" id="equation-eq-lstm-mg-example-model">
 <span class="eqno">(2.10)<a class="headerlink" href="#equation-eq-lstm-mg-example-model" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{aligned}
@@ -467,8 +468,8 @@ We use <code class="code python docutils literal notranslate"><span class="name"
 output of <a class="reference internal" href="#equation-eq-lstm-mg-example-model">Eq.2.10</a> is a vector, the target values for classification are
 categorical scalar labels; <span class="emp">therefore</span>, the model is tuned
 as the following to suit our situation,</p>
-<p><ol style="left-margin:20px"></p>
-<li value="1"><p>The dimension of hidden states <span class="math notranslate nohighlight">\(\mathbf{h}_{t}\)</span> is free to choose, but the dimension
+<p><ol style="margin-left:20px"></p>
+<li value="1" style="margin-top:10px"><p>The dimension of hidden states <span class="math notranslate nohighlight">\(\mathbf{h}_{t}\)</span> is free to choose, but the dimension
 of outputs <span class="math notranslate nohighlight">\({\widehat{\mathbf{y}}}_{t}\)</span> is designed to be equal to <span class="math notranslate nohighlight">\(\left| L \right|\)</span>.
 Moreover, we can design <span class="math notranslate nohighlight">\({\widehat{\mathbf{y}}}_{t}\)</span> as a discrete probability distribution.
 All these designs are for the loss function – the well-known
@@ -478,7 +479,7 @@ taking negative logarithm on the one element of
 <div class="math notranslate nohighlight" id="equation-eq-lstm-classifier-nllloss">
 <span class="eqno">(2.12)<a class="headerlink" href="#equation-eq-lstm-classifier-nllloss" title="Permalink to this equation">¶</a></span>\[\mathcal{l = -}\sum_{t = 1}^{N}{\log\left( {\widehat{\mathbf{y}}}_{t}\left( y_{t} \right) \right)}\]</div>
 </li>
-<li value="2"><p>Now in order for <span class="math notranslate nohighlight">\({\widehat{\mathbf{y}}}_{t} = g\left( \mathbf{h}_{t};𝛌_{t} \right)\)</span>
+<li value="2" style="margin-top:10px"><p>Now in order for <span class="math notranslate nohighlight">\({\widehat{\mathbf{y}}}_{t} = g\left( \mathbf{h}_{t};𝛌_{t} \right)\)</span>
 to be a probability distribution vector of dimension equal to the size
 of label set, we can let</p>
 <div class="math notranslate nohighlight">
@@ -635,10 +636,10 @@ then the trained model estimates the labels as the following,</p>
 <p><span style="padding-left:20px"></span> Given data <span class="math notranslate nohighlight">\(\mathbf{x}_{1},\ldots,\mathbf{x}_{N}\)</span>, a basic  <span><span class="def"> <span class="target" id="index-20"></span>autoencoder</span></span> is a two-layer function composition
 <span class="math notranslate nohighlight">\(g_{𝛉} \circ f_{𝛌}\)</span> aiming at self-regression, i.e. the objective of autoencoder is to find a function
 <span class="math notranslate nohighlight">\(f_{𝛉}\)</span>, known as  <span><span class="def"> <span class="target" id="index-21"></span>encoder</span></span>, and another function <span class="math notranslate nohighlight">\(g_{𝛌}\)</span>, known as  <span><span class="def"> <span class="target" id="index-22"></span>decoder</span></span>, such that</p>
-<table class="colwidths - given docutils" style="background:none; border:none;"><colgroup><col width = "31%" /><col width = "69%" /></colgroup><tbody><tr class="row-odd" style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;"><a class="reference internal image-reference" href="3_ml_methods\02_neural_networks\./basic_ae.png"><img alt="3_ml_methods\02_neural_networks\./basic_ae.png" src="basic_ae.png" /></a>
+<table class="colwidths - given docutils" style="background:none; border:none;" ><colgroup><col width = "31%" /><col width = "69%" /></colgroup><tbody><tr class="row-odd" style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;"><a class="reference internal image-reference" href="basic_ae.png"><img alt="basic_ae.png" src="basic_ae.png" /></a>
 </td><td  rowspan="2" style="background:none; border:none;"><div class="math notranslate nohighlight" id="equation-eq-ae-basic">
 <span class="eqno">(2.13)<a class="headerlink" href="#equation-eq-ae-basic" title="Permalink to this equation">¶</a></span>\[\mathbf{x}_{k} \approx {\widehat{\mathbf{x}}}_{k} = g_{𝛌}\left( f_{𝛉}\left( \mathbf{x}_{k} \right) \right),k = 1,\ldots,N\]</div>
-</td></tr><tr style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;"><p id="figure-ae-basic"><span style="text-align:center;display:block"> <span><span class="ibold"> Figure -1</span></span> The diagram of basic autoencoder.</span></span></p>
+</td></tr><tr style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;"><p id="figure-ae-basic"><span style="text-align:justify"> <span><span class="ibold"> Figure 3-4</span></span> The diagram of basic autoencoder.</span></span></p>
 </td><td  style="background:none; border:none;"></td></tr></tbody></table><p><span style="padding-left:20px"></span> Since each function is associated with its own parameters, we may omit
 the parameters and denote the functions as just <span class="math notranslate nohighlight">\(f,g\)</span> for simplicity.
 The loss function <span class="math notranslate nohighlight">\(ℓ\)</span> is defined for  <span><span class="def"> <span class="target" id="index-23"></span>reconstruction</span></span>
@@ -664,7 +665,7 @@ contrary, if we let <span class="math notranslate nohighlight">\(\dim\mathbf{h}_
 then we call such autoencoder  <span><span class="def"> <span class="target" id="index-29"></span>overcomplete</span></span> and those
 <span class="math notranslate nohighlight">\(\mathbf{h}_{k}\)</span> s as  <span><span class="def"> <span class="target" id="index-30"></span>overcomplete representations</span></span>, which maps
 data points to higher dimensional space and can be useful for classification.</p>
-<p><span style="padding-left:20px"></span> From <a class="reference internal" href="#equation-eq-ae-basic">Eq.2.13</a> and <a class="reference internal" href="__04_ae.html#figure-ae-basic"><span class="std std-ref">Figure -1</span></a>, it is clear <span><span class="result-highlight"> an autoencoder of above basic
+<p><span style="padding-left:20px"></span> From <a class="reference internal" href="#equation-eq-ae-basic">Eq.2.13</a> and <a class="reference internal" href="__04_ae.html#figure-ae-basic"><span class="std std-ref">Figure 3-4</span></a>, it is clear <span><span class="result-highlight"> an autoencoder of above basic
 structure is a feed-forward network</span></span>, therefore any discussion of FFN
 applies to autoencoder, for example, the back propagation process, and
 that adding additional layers such as
@@ -757,10 +758,10 @@ resampled for every iteration or at least for every few iterations of
 training to avoid bias. <span class="emp">Note</span> the loss function
 <span class="math notranslate nohighlight">\(ℓ\)</span> is still defined for reconstruction
 <span class="math notranslate nohighlight">\({\widehat{\mathbf{x}}}_{k}\)</span> s and original input <span class="math notranslate nohighlight">\(\mathbf{x}_{k}\)</span> s.</p>
-<table class="colwidths - given docutils" style="background:none; border:none;"><colgroup><col width = "40%" /><col width = "60%" /></colgroup><tbody><tr class="row-odd" style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;"><a class="reference internal image-reference" href="3_ml_methods\02_neural_networks\./basic_dae.png"><img alt="3_ml_methods\02_neural_networks\./basic_dae.png" src="basic_dae.png" /></a>
+<table class="colwidths - given docutils" style="background:none; border:none;" ><colgroup><col width = "40%" /><col width = "60%" /></colgroup><tbody><tr class="row-odd" style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;"><a class="reference internal image-reference" href="basic_dae.png"><img alt="basic_dae.png" src="basic_dae.png" /></a>
 </td><td  rowspan="2" style="background:none; border:none;"><div class="math notranslate nohighlight" id="equation-eq-dae-basic">
 <span class="eqno">(2.14)<a class="headerlink" href="#equation-eq-dae-basic" title="Permalink to this equation">¶</a></span>\[\mathbf{x}_{k} \approx g_{𝛌}\left( f_{𝛉}\left( {\widetilde{\mathbf{x}}}_{k} \right) \right),{\widetilde{\mathbf{x}}}_{k}\mathbb{\sim P}\left( \cdot |\mathbf{x}_{k} \right),k = 1,\ldots,N\]</div>
-</td></tr><tr style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;"><p id="figure-dae-basic"><span style="text-align:center;display:block"> <span><span class="ibold"> Figure -1</span></span> The diagram of basic denoising autoencoder.</span></span></p>
+</td></tr><tr style="text-align:center; vertical-align:middle; "><td  style="background:none; border:none;"><p id="figure-dae-basic"><span style="text-align:justify"> <span><span class="ibold"> Figure 3-5</span></span> The diagram of basic denoising autoencoder.</span></span></p>
 </td><td  style="background:none; border:none;"></td></tr></tbody></table><p><span style="padding-left:20px"></span> A third popular variant is called the  <span><span class="def"> <span class="target" id="index-40"></span>contractive autoencoder</span></span>. It is
 basically not a new model, but simply adds a norm
 <span class="math notranslate nohighlight">\(\left\| \mathbf{J}_{\mathbf{x}_{k}}f \right\|\)</span> of the Jacobian matrix
@@ -824,16 +825,16 @@ mall perturbation in <span class="math notranslate nohighlight">\(\mathbf{x}_{k}
             SOURCELINK_SUFFIX: '.txt'
         };
     </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
   
   
-    <script type="text/javascript" src="_static/js/theme.js"></script>
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
   
 
   <script type="text/javascript">

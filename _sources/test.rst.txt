@@ -18,7 +18,7 @@
 
 .. |list-div| raw:: html
 
-   <ul style="left-margin:20px">
+   <ul style="margin-left:20px">
 
 .. |end-list-div| raw:: html
 
@@ -26,7 +26,7 @@
 
 .. |enum-div| raw:: html
 
-   <ol style="left-margin:20px">
+   <ol style="margin-left:20px">
 
 .. |end-enum-div| raw:: html
 
@@ -34,11 +34,11 @@
 
 .. |item-div| raw:: html
 
-   <li>
+   <li style="margin-top:10px">
 
 .. |item| raw:: html
 
-   <li>
+   <li style="margin-top:10px">
 
 .. |end-item-div| raw:: html
 
@@ -128,6 +128,10 @@
 
    <span style="text-align:right;display:block">
 
+.. |span-justify| raw:: html
+
+   <span style="text-align:justify">
+
 .. |end-span| raw:: html
 
    </span></span>
@@ -163,7 +167,7 @@ Some Title For First Chapter
 
 .. raw:: html
 
-   <table class="docutils" style="background:none; border:none;"><tbody><tr class="row-odd"><td  style="background:none; border:none;">text1</td><td  style="background:none; border:none;">text2</td></tr><tr><td  style="background:none; border:none;">text3</td><td  style="background:none; border:none;">$$cell_01$$</td></tr></tbody></table>
+   <table class="docutils" style="background:none; border:none;" ><tbody><tr class="row-odd"><td  style="background:none; border:none;">text1</td><td  style="background:none; border:none;">text2</td></tr><tr><td  style="background:none; border:none;">text3</td><td  style="background:none; border:none;">$$cell_01$$</td></tr></tbody></table>
 
 
 .. raw:: html
@@ -290,12 +294,12 @@ Inline math examples: :math:`\color{blue}{σ_{1}}` equals :math:`\colorbox{thm}{
 
 .. _property_aa:
 
-:ititle:`Property 1-1.` Some property aa here.
+:ititle:`Property 1-8.` Some property aa here.
 
 
 .. _theorem_aa:
 
-:ititle:`Theorem 1-1.` Some theorem aa here.
+:ititle:`Theorem 1-11.` Some theorem aa here.
 
 Math block example:
 
@@ -322,12 +326,12 @@ Test again for direct inline latex pre-process extension :math:`\frac{x^2}{a^2}+
 
 .. _property_bb:
 
-:ititle:`Property 1-2.` Some property bb here.
+:ititle:`Property 1-9.` Some property bb here.
 
 
 .. _theorem_bb:
 
-:ititle:`Theorem 1-2.` Some theorem bb here.
+:ititle:`Theorem 1-12.` Some theorem bb here.
 
 Level 2 Title
 ****************
@@ -335,20 +339,20 @@ Level 2 Title
 
 .. _property_cc:
 
-:ititle:`Property 1-3.` Some property cc here.
+:ititle:`Property 1-10.` Some property cc here.
 
 
 .. _theorem_cc:
 
-:ititle:`Theorem 1-3.` Some theorem cc here.
+:ititle:`Theorem 1-13.` Some theorem cc here.
 
 
 Level 3 Title
 --------------------------
 Here also presents an itemized list.
 
-* Here is a link to :ref:`Property 1-2 <property_bb>`
-* This is a link to :ref:`Theorem 1-1 <theorem_aa>`
+* Here is a link to :ref:`Property 1-9 <property_bb>`
+* This is a link to :ref:`Theorem 1-11 <theorem_aa>`
 * This is a link to :eq:`round`.
 
 
